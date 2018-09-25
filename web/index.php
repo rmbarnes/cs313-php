@@ -13,6 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="navbar-collapse collapse show" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li nav-item>
@@ -23,10 +24,48 @@
     </header>
     <main role="main">
         <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">Welcome!</h1>
-            <p class="lead text-muted">You've landed upon my new homepage! How fortunate.</p></div></section>
+            <div class="container">
+                <h1 class="jumbotron-heading">Welcome!</h1>
+                <p class="lead text-muted">You've landed upon my new homepage! How fortunate.</p>
+                <p>
+                    <a href="#" class="btn btn-primary my-2">Placeholder button</a>
+                </p>
+            </div>
+        </section>
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="images/IMG_1306.JPG" data-holder-rendered="true">
+                            <div class="card-body">
+                                <p class="card-text">This is from a stop in Venice.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" alt="Thumbnail [100%x225]" src="images/IMG_1034.JPG" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                            <div class="card-body">
+                                <p class="card-text">The great duomo of Florence</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" alt="Thumbnail [100%x225]" src="images/IMG_0045.JPG" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                            <div class="card-body">
+                                <p class="card-text">I like this one, because it's featured in the Lizzie McGuire movie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+
 </body>
 
 </html>
