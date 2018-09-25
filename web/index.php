@@ -4,11 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>Hello World</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.1.3/dist/css/bootstrap.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <header>
+
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand" href="#">Home</a>
             <div class="navbar-collapse collapse show" id="navbarCollapse">
