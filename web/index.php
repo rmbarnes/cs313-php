@@ -54,9 +54,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" alt="Thumbnail [100%x225]" src="images/IMG_0045.JPG" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                            <img class="card-img-top" alt="Thumbnail [100%x225]" src="images/IMG_0565.JPG" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                             <div class="card-body">
-                                <p class="card-text">I like this one, because it's featured in the Lizzie McGuire movie.</p>
+                                <p class="card-text">Ancient Rome</p>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,15 @@
             </div>
         </div>
     </main>
-    <footer class="text-muted bg-light"><div class="container"><p>&copy; RBarnes <?php echo date("Y"); ?></p></div></footer>
+    <footer class="text-muted bg-light">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>&copy; RBarnes <?php echo date("Y"); ?></p>
+
+        </div>
+    </footer>
 </body>
 
 </html>
