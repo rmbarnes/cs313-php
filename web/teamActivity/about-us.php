@@ -5,6 +5,7 @@
         <title>Cookies | About Us</title>
     </head>
     <body>
+        <?php include 'teamHeader.php';?>
         <h1>We love cookies!</h1>
         <h2>Homemade cookies</h2>
         <h2>The Family</h2>
