@@ -9,10 +9,12 @@
 
 <body>
     <?php include 'teamHeader.php';?>
-    <h1>Sign in</h1>
-    <p>Please log in.</p>
-    <button type="button" onclick="">Login as Administrator</button>
-    <button type="button" onclick="">Login as Tester</button>
+    <main role="main">
+        <h1>Sign in</h1>
+        <p>Please log in.</p>
+        <button type="button" onclick="">Login as Administrator</button>
+        <button type="button" onclick="">Login as Tester</button>
+    </main>
 </body>
 
 </html>
