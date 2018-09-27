@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Cookies | About Us</title>
     <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
 <body>
