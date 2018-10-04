@@ -1,5 +1,5 @@
 <?php
-setcookie("fave-text", "i like cookies", time() + (86400 * &));
+setcookie("fave-text", "i like cookies", time() + (86400 * 7));
 ?>
 
 <!DOCTYPE html>
