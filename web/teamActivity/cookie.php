@@ -1,5 +1,8 @@
 <?php
-setcookie("fave-text", "i like cookies", time() + (86400 * 7));
+
+session_start();
+if ( !isset( $_SESSION['count'] ) )
+    $_SESSION['count'] = 1; else $_SESSION['count']++;
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +20,7 @@ setcookie("fave-text", "i like cookies", time() + (86400 * 7));
         <main role="main">
             <h1>Cookies, cookies, cookies!</h1>
             <p>Welcome. You are not logged in.</p>
+            <?php echo $_SESSION['count'] ?>
         </main>
 
     </body>
