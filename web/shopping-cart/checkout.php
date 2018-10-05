@@ -22,7 +22,7 @@ session_start();
             </div>
         </div>
         <div class="container col-md-8">
-            <form action="confirm-order.php">
+            <form method="post" action="confirm-order.php">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="firstname">First Name</label>
