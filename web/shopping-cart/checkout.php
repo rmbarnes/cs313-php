@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Checkout | Holiday Cookies</title>
-        <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.3/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="cart-style.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Checkout | Holiday Cookies</title>
+    <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="cart-style.css">
+</head>
 
-    <body>
-        <?php require 'cart-header.php';?>
-        <main role="main">
+<body>
+    <?php require 'cart-header.php';?>
+    <main role="main">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <h1>Checkout Your Cookies</h1>
+            </div>
+        </div>
+        <div class="container">
             <form action="confirm-order.php">
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -42,8 +48,8 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
-
-        </main>
-    </body>
+        </div>
+    </main>
+</body>
 
 </html>
