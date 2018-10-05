@@ -8,8 +8,8 @@ else $_SESSION['count']++;
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en-us">
+    <!DOCTYPE html>
+    <html lang="en-us">
 
     <head>
         <meta charset="utf-8">
@@ -28,7 +28,8 @@ else $_SESSION['count']++;
                             <div class="card mb-4 shadow-sm">
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/cookie-1864642_640.jpg" data-holder-rendered="true">
                                 <div class="card-body">
-                                    <p class="card-text">This is from our stop in Venice.</p>
+                                    <p class="card-text">Winter Assortment</p>
+                                    <button type="button" class="btn btn-success">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -36,7 +37,8 @@ else $_SESSION['count']++;
                             <div class="card mb-4 shadow-sm">
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/cookie-1065911_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                                 <div class="card-body">
-                                    <p class="card-text">The great Duomo of Florence</p>
+                                    <p class="card-text">Jelly-filled Rings</p>
+                                    <button type="button" class="btn btn-success">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +46,8 @@ else $_SESSION['count']++;
                             <div class="card mb-4 shadow-sm">
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/cinnamon-stars-1864647_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                                 <div class="card-body">
-                                    <p class="card-text">Ancient Rome</p>
+                                    <p class="card-text">Cinnamon Stars</p>
+                                    <button type="button" class="btn btn-success">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +61,8 @@ else $_SESSION['count']++;
                             <div class="card mb-4 shadow-sm">
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/christmas-biscuits-2939889_640.jpg" data-holder-rendered="true">
                                 <div class="card-body">
-                                    <p class="card-text">This is from our stop in Venice.</p>
+                                    <p class="card-text">Christmas Biscuits</p>
+                                    <button type="button" class="btn btn-success">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +70,8 @@ else $_SESSION['count']++;
                             <div class="card mb-4 shadow-sm">
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/christmas-3005464_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                                 <div class="card-body">
-                                    <p class="card-text">The great Duomo of Florence</p>
+                                    <p class="card-text">Christmas Moons</p>
+                                    <button type="button" class="btn btn-success">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +79,8 @@ else $_SESSION['count']++;
                             <div class="card mb-4 shadow-sm">
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/biscuit-2871223_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                                 <div class="card-body">
-                                    <p class="card-text">Ancient Rome</p>
+                                    <p class="card-text">Seven Swans</p>
+                                    <button type="button" class="btn btn-success">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -84,4 +90,4 @@ else $_SESSION['count']++;
         </main>
     </body>
 
-</html>
+    </html>
