@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -46,7 +51,7 @@
                         <input type="text" class="form-control" id="zip">
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary">Place Order</button>
             </form>
         </div>
     </main>
