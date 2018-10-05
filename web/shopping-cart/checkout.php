@@ -16,7 +16,7 @@
                 <h1>Checkout Your Cookies</h1>
             </div>
         </div>
-        <div class="container">
+        <div class="container col-md-8">
             <form action="confirm-order.php">
                 <div class="form-row">
                     <div class="form-group col-md-6">
