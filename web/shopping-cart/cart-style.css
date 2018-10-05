@@ -1,0 +1,7 @@
+body {
+    padding-top: 50px;
+}
+
+navbar navbar-expand-md navbar-dark fixed-top {
+    background-color: darkred;
+}

@@ -15,7 +15,7 @@ else $_SESSION['count']++;
         <meta charset="utf-8">
         <title>Holiday Cookies</title>
         <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.3/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="cart-style.css">
     </head>
 
     <body>
