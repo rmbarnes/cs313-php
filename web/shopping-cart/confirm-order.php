@@ -1,12 +1,14 @@
 <?php
 session_start();
 
-$_SESSION['firstname'] = htmlspecialchars($_POST["firstname"]);
-$_SESSION['lastname'] = htmlspecialchars($_POST["lastname"]);
-$_SESSION['address'] = htmlspecialchars($_POST["address"]);
-$_SESSION['city'] = htmlspecialchars($_POST["city"]);
-$_SESSION['state'] = htmlspecialchars($_POST["state"]);
-$_SESSION['zip'] = htmlspecialchars($_POST["zip"]);
+$firstname = htmlspecialchars($_POST["firstname"]);
+$lastname = htmlspecialchars($_POST["lastname"]);
+$address = htmlspecialchars($_POST["address"]);
+$city = htmlspecialchars($_POST["city"]);
+$state = htmlspecialchars($_POST["state"]);
+$zip = htmlspecialchars($_POST["zip"]);
+
+
 
 ?>
 
@@ -29,12 +31,12 @@ $_SESSION['zip'] = htmlspecialchars($_POST["zip"]);
                 </div>
             </div>
             <div class="container col-md-8">
-                <p><?php echo $_SESSION['firstname']?></p>
-                <p><?php echo $_SESSION['lastname']?></p>
-                <p><?php echo $_SESSION['address']?></p>
-                <p><?php echo $_SESSION['city']?></p>
-                <p><?php echo $_SESSION['state']?></p>
-                <p><?php echo $_SESSION['zip']?></p>
+                <p><? echo $firstname?></p>
+                <p><? echo $lastname?></p>
+                <p><? echo $address?></p>
+                <p><? echo $city?></p>
+                <p><? echo $state?></p>
+                <p><? echo $zip?></p>
 
             </div>
         </main>
