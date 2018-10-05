@@ -26,29 +26,29 @@ session_start();
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="firstname">First Name</label>
-                        <input type="text" class="form-control" id="firstname" placeholder="John">
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="John">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="lastname">Last Name</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="Smith">
+                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Smith">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="text" class="form-control" id="address">
+                    <input type="text" class="form-control" id="address" name="address">
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="city">City</label>
-                        <input type="text" class="form-control" id="city">
+                        <input type="text" class="form-control" id="city" name="city">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="state">State</label>
-                        <input type="text" class="form-control" id="state">
+                        <input type="text" class="form-control" id="state" name="state">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="zip">Zip</label>
-                        <input type="text" class="form-control" id="zip">
+                        <input type="text" class="form-control" id="zip" name="zip">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Place Order</button>
