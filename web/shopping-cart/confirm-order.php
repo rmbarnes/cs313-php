@@ -31,12 +31,9 @@ $zip = htmlspecialchars($_POST["zip"]);
                 </div>
             </div>
             <div class="container col-md-8">
-                <p><? echo $firstname?></p>
-                <p><? echo $lastname?></p>
-                <p><? echo $address?></p>
-                <p><? echo $city?></p>
-                <p><? echo $state?></p>
-                <p><? echo $zip?></p>
+                <p><? echo $firstname; echo " "; echo $lastname; ?></p>
+                <p><? echo $address; ?></p>
+                <p><? echo $city; echo ", "; echo $state; echo $zip; ?></p>
 
             </div>
         </main>
