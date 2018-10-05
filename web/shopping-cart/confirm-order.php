@@ -29,12 +29,12 @@ $_SESSION['zip'] = htmlspecialchars($_POST["zip"]);
                 </div>
             </div>
             <div class="container col-md-8">
-                <p><? echo $_SESSION['firstname']?></p>
-                <p><? echo $_SESSION['lastname']?></p>
-                <p><? echo $_SESSION['address']?></p>
-                <p><? echo $_SESSION['city']?></p>
-                <p><? echo $_SESSION['state']?></p>
-                <p><? echo $_SESSION['zip']?></p>
+                <p><?php echo $_SESSION['firstname']?></p>
+                <p><?php echo $_SESSION['lastname']?></p>
+                <p><?php echo $_SESSION['address']?></p>
+                <p><?php echo $_SESSION['city']?></p>
+                <p><?php echo $_SESSION['state']?></p>
+                <p><?php echo $_SESSION['zip']?></p>
 
             </div>
         </main>
