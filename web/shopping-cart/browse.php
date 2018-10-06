@@ -2,9 +2,12 @@
 
 session_start();
 //add some functionality here
-if ( !isset( $_SESSION['user'] ) )
-    $_SESSION['user'] = 1;
-else $_SESSION['count']++;
+$winterAssortment = "Winter Assortment";
+$cartArray = array();
+function addToCart($item)
+{
+    array_push($cartArray, $item);
+}
 
 ?>
 
@@ -27,16 +30,16 @@ else $_SESSION['count']++;
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/cookie-1864642_640.jpg" data-holder-rendered="true">
-                            <div class="card-body">
+                            <div class="card-body d-flex justify-content-between">
                                 <p class="card-text">Winter Assortment</p>
-                                <button type="button" class="btn btn-success">Add to Cart</button>
+                                <button type="button" class="btn btn-success" onclick="addToCart($winterAssortment)">Add to Cart</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/cookie-1065911_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
+                            <div class="card-body d-flex justify-content-between">
                                 <p class="card-text">Jelly-filled Rings</p>
                                 <button type="button" class="btn btn-success">Add to Cart</button>
                             </div>
@@ -45,7 +48,7 @@ else $_SESSION['count']++;
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/cinnamon-stars-1864647_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
+                            <div class="card-body d-flex justify-content-between">
                                 <p class="card-text">Cinnamon Stars</p>
                                 <button type="button" class="btn btn-success">Add to Cart</button>
                             </div>
@@ -60,7 +63,7 @@ else $_SESSION['count']++;
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/christmas-biscuits-2939889_640.jpg" data-holder-rendered="true">
-                            <div class="card-body">
+                            <div class="card-body d-flex justify-content-between d-flex justify-content-between">
                                 <p class="card-text">Christmas Biscuits</p>
                                 <button type="button" class="btn btn-success">Add to Cart</button>
                             </div>
@@ -69,7 +72,7 @@ else $_SESSION['count']++;
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/christmas-3005464_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
+                            <div class="card-body d-flex justify-content-between">
                                 <p class="card-text">Christmas Moons</p>
                                 <button type="button" class="btn btn-success">Add to Cart</button>
                             </div>
@@ -78,7 +81,7 @@ else $_SESSION['count']++;
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/biscuit-2871223_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
+                            <div class="card-body d-flex justify-content-between">
                                 <p class="card-text">Seven Swans</p>
                                 <button type="button" class="btn btn-success">Add to Cart</button>
                             </div>
