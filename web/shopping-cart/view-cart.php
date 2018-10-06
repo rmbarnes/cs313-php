@@ -24,11 +24,12 @@ var_dump($items);
                 <div class="row">
                     <ul>
                         <?php
-                            foreach($items as $item)
-                            {
-                                //$item_clean = htmlspecialchars($item);
-                                echo "<li>$item_clean</li>"
-                            }
+                        echo var_dump($items);
+//                            foreach($items as $item)
+//                            {
+//                                $item_clean = htmlspecialchars($item);
+//                                echo "<li>$item_clean</li>";
+//                            }
                         ?>
                     </ul>
                 </div>
