@@ -2,7 +2,7 @@
 
 session_start();
 
-$items = $_POST['cart'];
+$items = $_POST["cart"];
 
 ?>
 
@@ -30,7 +30,7 @@ $items = $_POST['cart'];
                                 <p class="card-text">'. $item_clean .'</p>
                             </div>
                         </div>
-                    </div>'}
+                    </div>'};
 
                     ?>
                 </div>
