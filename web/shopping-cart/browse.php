@@ -2,12 +2,7 @@
 
 session_start();
 //add some functionality here
-$winterAssortment = "Winter Assortment";
-$cartArray = array();
-function addToCart($item)
-{
-    array_push($cartArray, $item);
-}
+$_SESSION['cart'] = array();
 
 ?>
 
@@ -32,7 +27,7 @@ function addToCart($item)
                             <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/cookie-1864642_640.jpg" data-holder-rendered="true">
                             <div class="card-body d-flex justify-content-between">
                                 <p class="card-text">Winter Assortment</p>
-                                <button type="button" class="btn btn-success" onclick="addToCart($winterAssortment)">Add to Cart</button>
+                                <input type="checkbox" class="btn btn-success" name="cart[]" id="assortment">
                             </div>
                         </div>
                     </div>
