@@ -22,6 +22,8 @@ $items = $_POST["cart"];
         <div class="album py-5">
             <div class="container">
                 <div class="row">
+                    <? var_dump($items)?>
+<!--
                     <? foreach ($items as $item) {
                     $item_clean = htmlspecialchars($item);
                     echo
@@ -33,6 +35,7 @@ $items = $_POST["cart"];
                     </div>'};
 
                     ?>
+-->
                 </div>
             </div>
         </div>
