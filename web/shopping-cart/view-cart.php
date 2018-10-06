@@ -3,7 +3,7 @@
 session_start();
 
 $items = $_POST["cart"];
-
+var_dump($items);
 ?>
 
 <!DOCTYPE html>
@@ -22,20 +22,7 @@ $items = $_POST["cart"];
         <div class="album py-5">
             <div class="container">
                 <div class="row">
-                    <? var_dump($items)?>
-<!--
-                    <? foreach ($items as $item) {
-                    $item_clean = htmlspecialchars($item);
-                    echo
-                    '<div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                                <p class="card-text">'. $item_clean .'</p>
-                            </div>
-                        </div>
-                    </div>'};
-
-                    ?>
--->
+                  somthin
                 </div>
             </div>
         </div>
