@@ -26,8 +26,8 @@ var_dump($items);
                         <?php
                             foreach($items as $item)
                             {
-//                                $item_clean = htmlspecialchars($item);
-                                echo "<li>$item</li>";
+                                $item_clean = htmlspecialchars($item);
+                                echo "<li>$item_clean</li>";
                             }
                         ?>
                     </ul>
