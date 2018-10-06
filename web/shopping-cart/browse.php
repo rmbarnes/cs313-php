@@ -27,7 +27,7 @@ $_SESSION['cart'] = array();
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/cookie-1864642_640.jpg" data-holder-rendered="true">
                                 <div class="card-body d-flex justify-content-between">
                                     <p class="card-text">Winter Assortment</p>
-                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                    <input type="checkbox" name="cart[]" value="assortment">
                                 </div>
                             </div>
                         </div>
@@ -36,7 +36,7 @@ $_SESSION['cart'] = array();
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/cookie-1065911_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                                 <div class="card-body d-flex justify-content-between">
                                     <p class="card-text">Jelly-filled Rings</p>
-                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                    <input type="checkbox" name="cart[]" value="jelly">
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ $_SESSION['cart'] = array();
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/cinnamon-stars-1864647_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                                 <div class="card-body d-flex justify-content-between">
                                     <p class="card-text">Cinnamon Stars</p>
-                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                    <input type="checkbox" name="cart[]" value="cinnamon">
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ $_SESSION['cart'] = array();
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/christmas-biscuits-2939889_640.jpg" data-holder-rendered="true">
                                 <div class="card-body d-flex justify-content-between d-flex justify-content-between">
                                     <p class="card-text">Christmas Biscuits</p>
-                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                    <input type="checkbox" name="cart[]" value="biscuits">
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@ $_SESSION['cart'] = array();
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/christmas-3005464_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                                 <div class="card-body d-flex justify-content-between">
                                     <p class="card-text">Christmas Moons</p>
-                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                    <input type="checkbox" name="cart[]" value="moons">
                                 </div>
                             </div>
                         </div>
@@ -78,12 +78,15 @@ $_SESSION['cart'] = array();
                                 <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/biscuit-2871223_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                                 <div class="card-body d-flex justify-content-between">
                                     <p class="card-text">Seven Swans</p>
-                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                    <input type="checkbox" name="cart[]" value="swans">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row align-items-center">
+                <button type="button" class="btn btn-success">Add Items to Cart</button>
             </div>
         </form>
     </main>
