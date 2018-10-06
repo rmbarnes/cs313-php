@@ -18,7 +18,7 @@ $_SESSION['cart'] = array();
 <body>
     <?php require 'cart-header.php';?>
     <main role="main">
-        <form method="post" action="browse.php">
+        <form method="post" action="view-cart.php">
             <div class="album py-5">
                 <div class="container">
                     <div class="row">
