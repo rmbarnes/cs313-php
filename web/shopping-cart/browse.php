@@ -19,6 +19,11 @@ $_SESSION['cart'] = array();
     <?php require 'cart-header.php';?>
     <main role="main">
         <form method="post" action="">
+            <div class="container">
+                <div class="col">
+                    <button type="button" class="btn btn-success">Add Items to Cart</button>
+                </div>
+            </div>
             <div class="album py-5">
                 <div class="container">
                     <div class="row">
@@ -85,11 +90,7 @@ $_SESSION['cart'] = array();
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="row align-items-center">
-                    <button type="button" class="btn btn-success">Add Items to Cart</button>
-                </div>
-            </div>
+
         </form>
     </main>
 </body>
