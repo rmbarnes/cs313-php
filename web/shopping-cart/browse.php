@@ -85,8 +85,10 @@ $_SESSION['cart'] = array();
                     </div>
                 </div>
             </div>
-            <div class="row align-items-center">
-                <button type="button" class="btn btn-success">Add Items to Cart</button>
+            <div class="container">
+                <div class="row align-items-center">
+                    <button type="button" class="btn btn-success">Add Items to Cart</button>
+                </div>
             </div>
         </form>
     </main>
