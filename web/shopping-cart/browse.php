@@ -5,7 +5,6 @@ session_start();
 $_SESSION['cart'] = array();
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -19,72 +18,74 @@ $_SESSION['cart'] = array();
 <body>
     <?php require 'cart-header.php';?>
     <main role="main">
-        <div class="album py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/cookie-1864642_640.jpg" data-holder-rendered="true">
-                            <div class="card-body d-flex justify-content-between">
-                                <p class="card-text">Winter Assortment</p>
-                                <input type="checkbox" class="btn btn-success" name="cart[]" id="assortment">
+        <form method="post" action="">
+            <div class="album py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/cookie-1864642_640.jpg" data-holder-rendered="true">
+                                <div class="card-body d-flex justify-content-between">
+                                    <p class="card-text">Winter Assortment</p>
+                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/cookie-1065911_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body d-flex justify-content-between">
-                                <p class="card-text">Jelly-filled Rings</p>
-                                <button type="button" class="btn btn-success">Add to Cart</button>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/cookie-1065911_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                <div class="card-body d-flex justify-content-between">
+                                    <p class="card-text">Jelly-filled Rings</p>
+                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/cinnamon-stars-1864647_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body d-flex justify-content-between">
-                                <p class="card-text">Cinnamon Stars</p>
-                                <button type="button" class="btn btn-success">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="album py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/christmas-biscuits-2939889_640.jpg" data-holder-rendered="true">
-                            <div class="card-body d-flex justify-content-between d-flex justify-content-between">
-                                <p class="card-text">Christmas Biscuits</p>
-                                <button type="button" class="btn btn-success">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/christmas-3005464_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body d-flex justify-content-between">
-                                <p class="card-text">Christmas Moons</p>
-                                <button type="button" class="btn btn-success">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/biscuit-2871223_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body d-flex justify-content-between">
-                                <p class="card-text">Seven Swans</p>
-                                <button type="button" class="btn btn-success">Add to Cart</button>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/cinnamon-stars-1864647_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                <div class="card-body d-flex justify-content-between">
+                                    <p class="card-text">Cinnamon Stars</p>
+                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="album py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/christmas-biscuits-2939889_640.jpg" data-holder-rendered="true">
+                                <div class="card-body d-flex justify-content-between d-flex justify-content-between">
+                                    <p class="card-text">Christmas Biscuits</p>
+                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/christmas-3005464_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                <div class="card-body d-flex justify-content-between">
+                                    <p class="card-text">Christmas Moons</p>
+                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/biscuit-2871223_640.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                <div class="card-body d-flex justify-content-between">
+                                    <p class="card-text">Seven Swans</p>
+                                    <input type="checkbox" name="cart[]" id="assortment" value="Add to Cart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </main>
 </body>
 
