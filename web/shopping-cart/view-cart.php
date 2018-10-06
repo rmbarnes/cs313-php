@@ -22,7 +22,15 @@ var_dump($items);
         <div class="album py-5">
             <div class="container">
                 <div class="row">
-                  somthin
+                    <ul>
+                        <?php
+                            foreach($items as $item)
+                            {
+                                $item_clean = htmlspecialchars($item);
+                                echo "<li>$item_clean</li>"
+                            }
+                        ?>
+                    </ul>
                 </div>
             </div>
         </div>
