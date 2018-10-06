@@ -2,7 +2,7 @@
 
 session_start();
 
-$_SESSION['cart'] = $_POST['cart'];
+$items = $_POST['cart'];
 
 ?>
 
@@ -22,7 +22,7 @@ $_SESSION['cart'] = $_POST['cart'];
         <div class="album py-5">
             <div class="container">
                 <div class="row">
-                    <? foreach ($_SESSION[cart] as $item) {
+                    <? foreach ($items as $item) {
                     $item_clean = htmlspecialchars($item);
                     echo
                     '<div class="col-md-4">
