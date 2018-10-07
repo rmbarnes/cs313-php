@@ -4,12 +4,22 @@ session_start();
 
 $sessionCart = $_SESSION['cart'];
 
-$cart = $_REQUEST['cart'];
-if(isset($cart)) {
-    array_push($sessionCart, $cart);
+$cartItems = $_POST['cart'];
+if(isset($cartItems)) {
+    foreach($items as $item)
+    {
+        $item_clean = htmlspecialchars($item);
+        array_push($sessionCart, $item_clean);
+    }
     $_SESSION['cart'] = $sessionCart;
 }
+
+
+
 echo var_dump($_SESSION['cart']);
+
+
+
 $items = $_POST["cart"];
 ?>
 
