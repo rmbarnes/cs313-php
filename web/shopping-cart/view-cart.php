@@ -8,6 +8,8 @@ $cartItems = $_POST['cart'];
 if(isset($cartItems)) {
     foreach($cartItems as $item)
     {
+        echo var_dump($item);
+
         $item_clean = htmlspecialchars($item);
         array_push($sessionCart, $item_clean);
     }
