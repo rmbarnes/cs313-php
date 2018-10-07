@@ -4,6 +4,7 @@ session_start();
 //add some functionality here
 //$_SESSION["cart"] = array();
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en-us">

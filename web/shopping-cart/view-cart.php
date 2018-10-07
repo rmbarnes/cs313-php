@@ -2,8 +2,15 @@
 
 session_start();
 
+$sessionCart = $_SESSION['cart'];
+
+$cart = $_REQUEST['cart'];
+if(isset($cart)) {
+    array_push($sessionCart, $cart);
+    $_SESSION['cart'] = $sessionCart;
+}
+echo var_dump($_SESSION['cart']);
 $items = $_POST["cart"];
-var_dump($items);
 ?>
 
 <!DOCTYPE html>
