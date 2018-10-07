@@ -43,7 +43,7 @@ if($_SESSION['cart'] == NULL) {
                         <?php
                             foreach($_SESSION['cart'] as $item)
                             {
-                                echo "<li>$item</li>";
+                                echo "<li>$item <button type='button'>Remove item</button></li>";
                             }
                         ?>
                     </ul>
