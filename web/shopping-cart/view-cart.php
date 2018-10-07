@@ -10,9 +10,9 @@ if(isset($cartItems)) {
     {
 
         $item_clean = htmlspecialchars($item);
-        echo var_dump($item_clean);
-
         array_push($sessionCart, $item_clean);
+        echo var_dump($sessionCart);
+
     }
     $_SESSION['cart'] = $sessionCart;
 }
