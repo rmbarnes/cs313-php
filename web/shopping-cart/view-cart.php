@@ -4,17 +4,19 @@ session_start();
 
 $_SESSION['cart'] = array();
 
-$cartItems = $_POST['cart'];
-if(isset($cartItems)) {
-    foreach($cartItems as $item)
-    {
-        $item_clean = htmlspecialchars($item);
-        array_push($_SESSION['cart'], $item_clean);
+if(!isset($_SESSION['cart'])) {
+
+    $cartItems = $_POST['cart'];
+    if(isset($cartItems)) {
+        foreach($cartItems as $item)
+        {
+            $item_clean = htmlspecialchars($item);
+            array_push($_SESSION['cart'], $item_clean);
+        }
     }
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -36,7 +38,8 @@ if(isset($cartItems)) {
                             foreach($_SESSION['cart'] as $item)
                             {
                                 echo "<li>$item</li>";
-                            }
+                            };
+
                         ?>
                     </ul>
                 </div>

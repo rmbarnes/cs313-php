@@ -41,7 +41,7 @@ $zip = htmlspecialchars($_POST["zip"]);
                 echo "<h2>Your items: </h2><ul>";
                     foreach($_SESSION['cart'] as $item)
                     {
-                        echo "<li>$item<li>";
+                        echo "<li>$item</li>";
                     };
                 echo "</ul>";
             }
