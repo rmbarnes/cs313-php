@@ -38,11 +38,12 @@ $zip = htmlspecialchars($_POST["zip"]);
             <div class="container col-md-8">
                 <?php
             if(isset($_SESSION['cart'])) {
-                echo "<h2>Your items: </h2>";
+                echo "<h2>Your items: </h2><ul>";
                     foreach($_SESSION['cart'] as $item)
                     {
-                        echo "<p>$item<p><br>";
+                        echo "<li>$item<li>";
                     };
+                echo "</ul>";
             }
             ?>
             </div>
