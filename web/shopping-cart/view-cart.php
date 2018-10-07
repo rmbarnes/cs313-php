@@ -2,7 +2,6 @@
 
 session_start();
 
-$sessionCart = array();
 $_SESSION['cart'] = array();
 
 $cartItems = $_POST['cart'];
@@ -11,11 +10,10 @@ if(isset($cartItems)) {
     {
 
         $item_clean = htmlspecialchars($item);
-        array_push($sessionCart, $item_clean);
-        echo var_dump($sessionCart);
+        array_push($_SESSION['cart'], $item_clean);
     }
-    $_SESSION['cart'] = $sessionCart;
 }
+echo var_dump($_SESSION['cart']);
 
 
 
