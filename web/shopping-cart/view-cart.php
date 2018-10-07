@@ -6,7 +6,7 @@ $sessionCart = $_SESSION['cart'];
 
 $cartItems = $_POST['cart'];
 if(isset($cartItems)) {
-    foreach($items as $item)
+    foreach($cartItems as $item)
     {
         $item_clean = htmlspecialchars($item);
         array_push($sessionCart, $item_clean);
@@ -16,7 +16,7 @@ if(isset($cartItems)) {
 
 
 
-echo var_dump($cartItems);
+echo var_dump($_SESSION['cart']);
 
 
 
