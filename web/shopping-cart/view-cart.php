@@ -30,6 +30,11 @@ if($_SESSION['cart'] == NULL) {
 <body>
     <?php require 'cart-header.php';?>
     <main role="main">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <h1>Your Cart</h1>
+            </div>
+        </div>
         <div class="album py-5">
             <div class="container">
                 <div class="row">
