@@ -2,9 +2,10 @@
 
 session_start();
 
-$_SESSION['cart'] = array();
 
 if($_SESSION['cart'] == NULL) {
+    $_SESSION['cart'] = array();
+
     $cartItems = $_POST['cart'];
     if(isset($cartItems)) {
         foreach($cartItems as $item)
