@@ -8,17 +8,11 @@ $cartItems = $_POST['cart'];
 if(isset($cartItems)) {
     foreach($cartItems as $item)
     {
-
         $item_clean = htmlspecialchars($item);
         array_push($_SESSION['cart'], $item_clean);
     }
 }
-echo var_dump($_SESSION['cart']);
 
-
-
-
-$items = $_POST["cart"];
 ?>
 
 <!DOCTYPE html>
@@ -39,10 +33,9 @@ $items = $_POST["cart"];
                 <div class="row">
                     <ul>
                         <?php
-                            foreach($items as $item)
+                            foreach($_SESSION['cart'] as $item)
                             {
-                                $item_clean = htmlspecialchars($item);
-                                echo "<li>$item_clean</li>";
+                                echo "<li>$item</li>";
                             }
                         ?>
                     </ul>
