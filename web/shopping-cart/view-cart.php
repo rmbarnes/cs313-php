@@ -16,7 +16,7 @@ if(isset($cartItems)) {
 
 
 
-echo var_dump($_SESSION['cart']);
+echo var_dump($cartItems);
 
 
 
