@@ -4,8 +4,7 @@ session_start();
 
 $_SESSION['cart'] = array();
 
-if(!isset($_SESSION['cart'])) {
-
+if($_SESSION['cart'] == NULL) {
     $cartItems = $_POST['cart'];
     if(isset($cartItems)) {
         foreach($cartItems as $item)
@@ -17,6 +16,7 @@ if(!isset($_SESSION['cart'])) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -38,8 +38,7 @@ if(!isset($_SESSION['cart'])) {
                             foreach($_SESSION['cart'] as $item)
                             {
                                 echo "<li>$item</li>";
-                            };
-
+                            }
                         ?>
                     </ul>
                 </div>
