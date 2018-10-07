@@ -8,8 +8,6 @@ $city = htmlspecialchars($_POST["city"]);
 $state = htmlspecialchars($_POST["state"]);
 $zip = htmlspecialchars($_POST["zip"]);
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +34,17 @@ $zip = htmlspecialchars($_POST["zip"]);
                 <p><? echo $city; echo ", "; echo $state;
                     echo " "; echo $zip; ?></p>
 
+            </div>
+            <div class="container col-md-8">
+                <?php
+            if(isset($_SESSION['cart'])) {
+                echo "<h2>Your items: </h2>"
+                    foreach($_SESSION['cart'] as $item)
+                    {
+                        echo "<p>$item<p><br>";
+                    }
+            }
+            ?>
             </div>
         </main>
     </body>
