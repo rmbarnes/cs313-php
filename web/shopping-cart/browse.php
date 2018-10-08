@@ -5,6 +5,19 @@ session_start();
 //$_SESSION["cart"] = array();
 
 
+if($_SESSION['cart'] == NULL) {
+    $_SESSION['cart'] = array();
+
+    $cartItems = $_POST['cart'];
+    if(isset($cartItems)) {
+        foreach($cartItems as $item)
+        {
+            $item_clean = htmlspecialchars($item);
+            array_push($_SESSION['cart'], $item_clean);
+        }
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -19,7 +32,7 @@ session_start();
 <body>
     <?php require 'cart-header.php';?>
     <main role="main">
-        <form method="post" action="view-cart.php">
+        <form method="post" action="browse.php">
             <div class="album py-5">
                 <div class="container">
                     <div class="row">
