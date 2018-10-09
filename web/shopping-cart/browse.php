@@ -5,18 +5,14 @@ session_start();
 //$_SESSION["cart"] = array();
 
 
-if($_SESSION['cart'] == NULL) {
-    $_SESSION['cart'] = array();
-
     $cartItems = $_POST['cart'];
     if(isset($cartItems)) {
         foreach($cartItems as $item)
         {
-            $item_clean = htmlspecialchars($item);
-            array_push($_SESSION['cart'], $item_clean);
+            $_SESSION['cart'][$item] = $item;
         }
     }
-}
+
 
 ?>
 <!DOCTYPE html>
