@@ -1,6 +1,14 @@
 <?php
 
 session_start();
+
+$removedItem = $_POST['remove'];
+
+    if(isset($removedItem)) {
+        unset($_SESSION['cart'][$removedItem]);
+
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,20 +29,17 @@ session_start();
                 <h1>Your Cart</h1>
             </div>
         </div>
-        <div class="album py-5">
-            <div class="container">
-                <div class="row">
+        <form method="post" action="view-cart.php">
+
                     <ul>
                         <?php
                             foreach($_SESSION['cart'] as $item)
                             {
-                                echo "<li>$item <button type='button'>Remove item</button></li>";
+                                echo "<li>$item <input type='submit' name='remove' value='$item'>Remove item</button></li>";
                             }
                         ?>
                     </ul>
-                </div>
-            </div>
-        </div>
+        </form>
     </main>
 </body>
 
