@@ -56,9 +56,9 @@ $removedItem = $_POST['remove'];
                     <a class="btn btn-primary" href="browse.php">Continue Shopping</a>
                 </div>
                 <div class="col-sm">
+                    <a class="btn btn-success" href="checkout.php">Checkout</a>
                 </div>
                 <div class="col-sm">
-                    <a class="btn btn-success" href="checkout.php">Checkout</a>
                 </div>
             </div>
         </div>
