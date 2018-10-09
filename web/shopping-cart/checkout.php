@@ -55,9 +55,9 @@ session_start();
             </form>
 
         </div>
-        <div class="column">
+        <div class="container">
             <div class="row">
-                <a class="btn btn-default" href="view-cart.php">Return to Cart</a>
+                <a class="btn btn-warning" href="view-cart.php">Return to Cart</a>
 
             </div>
         </div>
