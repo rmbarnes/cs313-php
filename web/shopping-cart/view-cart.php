@@ -5,7 +5,7 @@ session_start();
 $removedItem = $_POST['remove'];
 
     if(isset($removedItem)) {
-        echo $_SESSION['cart'];
+        echo $_SESSION['cart'][$removedItem];
         echo $removedItem;
         array_splice($_SESSION['cart'], $removedItem);
     }
