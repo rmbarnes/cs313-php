@@ -50,6 +50,9 @@ $removedItem = $_POST['remove'];
                 ?>
 
         </form>
+        <a class="btn btn-success" href="browse.php">Checkout</a>
+
+        <a class="btn btn-primary" href="browse.php">Continue Shopping</a>
     </main>
 </body>
 
