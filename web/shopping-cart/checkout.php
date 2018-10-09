@@ -57,9 +57,9 @@ session_start();
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-sm-4">
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-4">
                 <a class="btn btn-danger" href="view-cart.php">Return to Cart</a>
                 </div>
             </div>
