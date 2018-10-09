@@ -53,14 +53,14 @@ session_start();
                 </div>
                 <button type="submit" class="btn btn-primary">Place Order</button>
             </form>
+            <div class="container">
+                <div class="row">
+                    <a class="btn btn-warning" href="view-cart.php">Return to Cart</a>
 
-        </div>
-        <div class="container">
-            <div class="row">
-                <a class="btn btn-warning" href="view-cart.php">Return to Cart</a>
-
+                </div>
             </div>
         </div>
+
     </main>
 </body>
 
