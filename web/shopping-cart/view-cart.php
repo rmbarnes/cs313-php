@@ -33,7 +33,7 @@ $removedItem = $_POST['remove'];
                         <?php
                             foreach($_SESSION['cart'] as $item)
                             {
-                                echo "<li>$item <input type='submit' name='remove' value='$item'>Remove item</button></li>";
+                                echo "<li>$item <button type='submit' name='remove' value='$item'>Remove item</button></li>";
                             }
                         ?>
                     </ul>
