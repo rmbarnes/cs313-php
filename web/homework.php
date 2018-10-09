@@ -12,7 +12,8 @@
         <main role="main">
             <section class="jumbotron text-center">
                 <div class="container">
-                    <h1 class="jumbotron-heading">Coming Soon!</h1>
+                    <h1 class="jumbotron-heading">Assignments</h1>
+                    <a class="btn btn-outline-info" href="shopping-cart/browse.php">Shopping Cart</a>
                 </div>
             </section>
         </main>
