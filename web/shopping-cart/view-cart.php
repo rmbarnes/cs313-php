@@ -44,7 +44,7 @@ $removedItem = $_POST['remove'];
                             </div>
                             </div>
                             </div>
-                            </div>"
+                            </div>";
 
 //                        echo "<li>$item <button type='submit' class='.btn-danger' name='remove' value='$item'>Remove item</button></li>";
                     }
