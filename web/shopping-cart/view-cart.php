@@ -39,7 +39,7 @@ $removedItem = $_POST['remove'];
                             <div class='col-md-4'>
                             <div class='card mb-4 shadow-sm'>
                             <div class='card-body d-flex justify-content-between'>
-                            $item <button type='submit' class='.btn-danger' name='remove' value='$item'>Remove</button>
+                            $item <button type='submit' class='.btn .btn-danger' name='remove' value='$item'>Remove</button>
                             </div>
                             </div>
                             </div>
