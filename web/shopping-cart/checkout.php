@@ -51,11 +51,13 @@ session_start();
                         <input type="text" class="form-control" id="zip" name="zip">
                     </div>
                 </div>
+                <div class="row">
                 <div class="col-sm-4">
                     <a class="btn btn-danger" href="view-cart.php">Return to Cart</a>
                 </div>
                 <div class="col-sm-4">
                 <button type="submit" class="btn btn-primary">Place Order</button>
+                </div>
                 </div>
             </form>
 
