@@ -5,6 +5,7 @@ session_start();
 $removedItem = $_POST['remove'];
 
     if(isset($removedItem)) {
+        echo "hello";
         unset($_SESSION['cart'][$removedItem]);
     }
 ?>
