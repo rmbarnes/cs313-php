@@ -16,13 +16,14 @@
             <div class="container">
                 <h1 class="jumbotron-heading">Assignments</h1>
             </div>
-            <div class="container">
-                <div class="row">
-                    <a class="btn btn-outline-info" href="shopping-cart/browse.php">Shopping Cart</a>
 
-                </div>
-            </div>
         </section>
+        <div class="container">
+            <div class="row">
+                <a class="btn btn-outline-info" href="shopping-cart/browse.php">Shopping Cart</a>
+
+            </div>
+        </div>
     </main>
 </body>
 
