@@ -6,9 +6,7 @@ $removedItem = $_POST['remove'];
 
     if(isset($removedItem)) {
         unset($_SESSION['cart'][$removedItem]);
-
     }
-}
 ?>
 
 <!DOCTYPE html>
