@@ -1,9 +1,9 @@
 <?php
     require('../php-connect.php');
 
-    if (isset($_POST['book']))
+    if (isset($_GET['book']))
     {
-        $book = $_POST['book'];
+        $book = $_GET['book'];
         $query = 'SELECT book, chapter, verse, content FROM scriptures WHERE book = $book';
     }
     else {
