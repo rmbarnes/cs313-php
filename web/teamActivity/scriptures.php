@@ -1,5 +1,14 @@
 <?php
     require('../php-connect.php');
+
+    if (isset($_POST['book']))
+    {
+        $book = $_POST['book'];
+        $query = $db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = $book');
+    }
+    else {
+        $query = $db->query('SELECT book, chapter, verse, content FROM scriptures');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +26,8 @@
         <main role="main">
             <h1>Scripture Resources</h1>
             <?php
-                foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
+
+                foreach ($db->query($query) as $row)
                 {
                     echo '<b>'.$row['book'];
                     echo ' ' . $row['chapter'];
@@ -26,6 +36,11 @@
                     echo '<br/>';
                 }
             ?>
+
+            <form action="scriptures.php" method="GET">
+                Book: <input type="text" name="book">
+                <input type="submit" value="Query">
+            </form>
         </main>
 
     </body>
