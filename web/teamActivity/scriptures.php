@@ -4,11 +4,12 @@
     if (isset($_POST['book']))
     {
         $book = $_POST['book'];
-        $query = $db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = $book');
+        $query = 'SELECT book, chapter, verse, content FROM scriptures WHERE book = $book';
     }
     else {
-        $query = $db->query('SELECT book, chapter, verse, content FROM scriptures');
+        $query = 'SELECT book, chapter, verse, content FROM scriptures';
     }
+
 ?>
 
 <!DOCTYPE html>
