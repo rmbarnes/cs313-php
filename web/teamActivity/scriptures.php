@@ -19,10 +19,10 @@
             <?php
                 foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
                 {
-                    echo $row['book'];
+                    echo '<b>'$row['book'];
                     echo ' ' . $row['chapter'];
-                    echo ':' . $row['verse'];
-                    echo ' - ' . $row['content'];
+                    echo ':' . $row['verse']'</b>';
+                    echo ' - "' . $row['content'].'"';
                     echo '<br/>';
                 }
             ?>
