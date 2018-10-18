@@ -29,7 +29,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <h1>Movies</h1>
             <ul>
                 <?php
-                    foreach(movies as movie) {
+                    foreach($movies as $movie) {
                         $title = $movie['title'];
                         $year = $movie['year'];
                         echo "<li><p>$title, $year</p></li>";
