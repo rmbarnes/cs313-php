@@ -5,6 +5,7 @@
     if (isset($_POST['book']))
     {
         $book = $_POST['book'];
+
         $query = "SELECT book, chapter, verse, content FROM scriptures WHERE book = '$book'";
     }
     else {

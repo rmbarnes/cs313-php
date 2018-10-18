@@ -30,10 +30,14 @@ CREATE TABLE public.recipe
 (
     id SERIAL NOT NULL PRIMARY KEY,
     user_id INT NOT NULL REFERENCES public.user(id),
-        speaker_id INT NOT NULL REFERENCES public.speaker(id),
-        conference_id INT NOT NULL REFERENCES public.conference(id),
     recipe_title TEXT NOT NULL,
     recipe_ingredients TEXT NOT NULL,
-    recipe_category INT NOT NULL REFERENCES public.category(id),
-    meal_plan INT REFERENCES public.meal_plan(id)
+    recipe_category INT NOT NULL REFERENCES public.category(id)
+);
+
+CREATE TABLE public.meal_plan_recipe
+(
+    id SERIAL NOT NULL PRIMARY KEY,
+    recipe_id INT NOT NULL REFERENCES public.recipe(id),
+    meal_plan_id INT NOT NULL REFERENCES public.meal_plan(id),
 );
