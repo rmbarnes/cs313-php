@@ -48,8 +48,8 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
             <div class="bg">
-                    <h1 class="display-4 font-italic">Is it time for dinner?</h1>
-                    <p class="lead my-3">We're here to help.</p>
+                    <h1 class="display-4 font-italic banner-text">Time for dinner?</h1>
+                    <p class="lead my-3 banner-text">We're here to help.</p>
             </div>
 
 
