@@ -34,8 +34,14 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
 
             <form method="post" action="browse.php">
-                <input type="search">
-                <input type="submit">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <input class="btn btn-default" type="submit" value="Search">
+                        </span>
+                    </div>
+                </div>
             </form>
             <div class="album py-5">
                 <div class="container">
