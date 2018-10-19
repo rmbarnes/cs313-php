@@ -43,10 +43,10 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php
                 foreach ($recipeTitle as $recipe)
                 {
-                    echo "<div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body d-flex justify-content-between">
-                                    <p class="card-text">$recipe</p>
+                    echo "<div class='col-md-4'>
+                            <div class='card mb-4 shadow-sm'>
+                                <div class='card-body d-flex justify-content-between'>
+                                    <p class='card-text'>$recipe</p>
                                 </div>
                             </div>
                         </div>"
