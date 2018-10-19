@@ -43,7 +43,7 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php
                 foreach ($recipes as $recipe)
                 {
-                    $recipeTitle = $recipe['recipe_title']
+                    $recipeTitle = $recipe['recipe_title'];
                     echo "<div class='col-md-4'>
                             <div class='card mb-4 shadow-sm'>
                                 <div class='card-body d-flex justify-content-between'>
