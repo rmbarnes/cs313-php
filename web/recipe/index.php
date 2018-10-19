@@ -47,7 +47,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 -->
 
 
-            <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark" >
+            <div class="bg" >
                 <div class="col-md-6 px-0">
                     <h1 class="display-4 font-italic">Is it time for dinner?</h1>
                     <p class="lead my-3">We're here to help.</p>
