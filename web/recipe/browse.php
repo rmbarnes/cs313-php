@@ -29,16 +29,16 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <main role="main">
 
             <div class="bg">
-                <h1 class="display-4 font-italic banner-text">Time for dinner?</h1>
+                <h1 class="display-4 font-italic banner-text">Need some inspiration?</h1>
                 <p class="lead my-3 banner-text">We're here to help.</p>
             </div>
 
             <form method="post" action="browse.php">
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search for...">
                         <span class="input-group-btn">
-                            <input class="btn btn-default" type="submit" value="Search">
+                            <button class="btn btn-default" type="submit">Search</button>
                         </span>
                     </div>
                 </div>
