@@ -50,7 +50,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 </div>
                             </div>
                         </div>";
-                }
+                };
             ?>
                     </div>
                 </div>
