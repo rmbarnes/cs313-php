@@ -49,7 +49,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <p class='card-text'>$recipe</p>
                                 </div>
                             </div>
-                        </div>"
+                        </div>";
                 }
             ?>
                     </div>
