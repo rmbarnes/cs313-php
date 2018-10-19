@@ -17,5 +17,5 @@ body {
 }
 
 .navbar.navbar-expand-md.navbar-dark.fixed-top{
-    background-color: #582;
+    background-color: #458; /* or this nice green shade #582;*/
 }
