@@ -34,6 +34,7 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
 
             <form method="post" action="browse.php">
+                <div class="col-md-6"></div>
                 <div class="col-md-6">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search for...">
