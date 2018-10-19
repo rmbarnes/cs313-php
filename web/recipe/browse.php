@@ -7,7 +7,7 @@ $db = get_db();
 $stmt = $db->prepare('SELECT recipe_title FROM recipe');
 //$stmt->bindValue(':recipe_title', $recipeTitle, PDO::PARAM_STR);
 $stmt->execute();
-$movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 //go through each movie in the result
 
@@ -41,7 +41,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="container">
                     <div class="row">
             <?php
-                foreach ($recipeTitle as $recipe)
+                foreach ($recipes as $recipe)
                 {
                     echo "<div class='col-md-4'>
                             <div class='card mb-4 shadow-sm'>
