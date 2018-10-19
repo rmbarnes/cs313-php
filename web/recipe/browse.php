@@ -4,7 +4,7 @@ require('../php-connect.php');
 $db = get_db();
 
 //query for all movies
-$stmt = $db->prepare('SELECT recipe_title FROM recipe');
+$stmt = $db->prepare('SELECT * FROM recipe');
 //$stmt->bindValue(':recipe_title', $recipeTitle, PDO::PARAM_STR);
 $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -43,10 +43,11 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php
                 foreach ($recipes as $recipe)
                 {
+                    $recipeTitle = $recipe['recipe_title']
                     echo "<div class='col-md-4'>
                             <div class='card mb-4 shadow-sm'>
                                 <div class='card-body d-flex justify-content-between'>
-                                    <p class='card-text'>$recipe</p>
+                                    <p class='card-text'>$recipeTitle</p>
                                 </div>
                             </div>
                         </div>";
