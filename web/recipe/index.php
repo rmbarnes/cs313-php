@@ -20,13 +20,14 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <meta charset="utf-8">
         <title>Cooking Moms | Home</title>
         <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.3/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="teamStyle.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
     <body>
         <?php require('recipe-header.php') ;?>
         <main role="main">
 
+<!--
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -43,17 +44,15 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                     </div>
             </div>
+-->
 
 
-<!--
-            <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-                <img src="../images/rawpixel-247358-unsplash.jpg" class="img-fluid" alt="Responsive image">
+            <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark" >
                 <div class="col-md-6 px-0">
                     <h1 class="display-4 font-italic">Is it time for dinner?</h1>
                     <p class="lead my-3">We're here to help.</p>
                 </div>
             </div>
--->
 
 
             <div class="album py-5">

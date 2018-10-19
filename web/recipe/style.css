@@ -1,0 +1,5 @@
+jumbotron p-3 p-md-5 text-white rounded bg-dark {
+    background-image: '../images/rawpixel-247358-unsplash.jpg';
+    background-repeat: no-repeat, repeat;
+    padding: 15px;
+}
