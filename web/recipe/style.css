@@ -19,3 +19,7 @@ body {
 .banner-text {
     color: white;
 }
+
+.navbar.navbar-expand-md.navbar-dark.fixed-top{
+    background-color: #b73;
+}

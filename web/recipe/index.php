@@ -27,26 +27,6 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php require('recipe-header.php') ;?>
         <main role="main">
 
-<!--
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="first-slide" src="../images/rawpixel-247358-unsplash.jpg" alt="First slide">
-                        <div class="container">
-                            <div class="carousel-caption text-left">
-                                <h1>Is it time for dinner?</h1>
-                                <p>We're here to help.</p>
-                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                            </div>
-                        </div>
-                    </div>
-            </div>
--->
-
-
             <div class="bg">
                     <h1 class="display-4 font-italic banner-text">Time for dinner?</h1>
                     <p class="lead my-3 banner-text">We're here to help.</p>
