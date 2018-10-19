@@ -4,7 +4,7 @@ body {
 
 .bg {
     /* The image used */
-    background-image: url("../images/annie-spratt-215756-unsplash.jpg");
+    background-image: url("../images/hermes-rivera-258743-unsplash.jpg");
 
     /* Full height */
     height: 100%;
@@ -16,10 +16,6 @@ body {
     padding: 120px;
 }
 
-.banner-text {
-    color: white;
-}
-
 .navbar.navbar-expand-md.navbar-dark.fixed-top{
-    background-color: #b73;
+    background-color: #582;
 }
