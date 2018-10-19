@@ -13,8 +13,8 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en-us">
+    <!DOCTYPE html>
+    <html lang="en-us">
 
     <head>
         <meta charset="utf-8">
@@ -28,8 +28,8 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <main role="main">
 
             <div class="bg">
-                    <h1 class="display-4 font-italic banner-text">Time for dinner?</h1>
-                    <p class="lead my-3 banner-text">We're here to help.</p>
+                <h1 class="display-4 font-italic banner-text">Time for dinner?</h1>
+                <p class="lead my-3 banner-text">We're here to help.</p>
             </div>
 
 
@@ -38,26 +38,32 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
-                                <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/mariana-medvedeva-561531-unsplash.jpg" data-holder-rendered="true">
-                                <div class="card-body d-flex justify-content-between">
-                                    <p class="card-text">Find DINspiration</p>
-                                </div>
+                                <a href="browse.php">
+                                    <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../images/mariana-medvedeva-561531-unsplash.jpg" data-holder-rendered="true">
+                                    <div class="card-body d-flex justify-content-between">
+                                        <p class="card-text">Find DINspiration</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
-                                <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/annie-spratt-464751-unsplash.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                                <div class="card-body d-flex justify-content-between">
-                                    <p class="card-text">Your Tried and True</p>
-                                </div>
+                                <a href="user-recipes.php">
+                                    <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/annie-spratt-464751-unsplash.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                    <div class="card-body d-flex justify-content-between">
+                                        <p class="card-text">Your Tried and True</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
-                                <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/joseph-gonzalez-346674-unsplash.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                                <div class="card-body d-flex justify-content-between">
-                                    <p class="card-text">Plan For the Future</p>
-                                </div>
+                                <a href="meal-plans.php">
+                                    <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/joseph-gonzalez-346674-unsplash.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                                    <div class="card-body d-flex justify-content-between">
+                                        <p class="card-text">Plan For the Future</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -67,4 +73,4 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     </body>
 
-</html>
+    </html>
