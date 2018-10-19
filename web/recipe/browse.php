@@ -5,7 +5,7 @@ $db = get_db();
 
 //query for all movies
 $stmt = $db->prepare('SELECT recipe_title FROM recipe');
-$stmt->bindValue(':recipe_title', $recipeTitle, PDO::PARAM_STR);
+//$stmt->bindValue(':recipe_title', $recipeTitle, PDO::PARAM_STR);
 $stmt->execute();
 $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
