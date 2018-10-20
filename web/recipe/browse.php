@@ -15,11 +15,11 @@ else {
     $query = 'SELECT * FROM recipe';
 }
 
-//query for all movies
-$stmt = $db->prepare($query);
-//$stmt->bindValue(':recipe_title', $recipeTitle, PDO::PARAM_STR);
-$stmt->execute();
-$recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+////query for all movies
+//$stmt = $db->prepare($query);
+////$stmt->bindValue(':recipe_title', $recipeTitle, PDO::PARAM_STR);
+//$stmt->execute();
+//$recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -42,7 +42,7 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <p class="lead my-3 banner-text">We're here to help.</p>
             </div>
 
-            <form method="post" action="browse.php">
+            <form method="POST" action="browse.php">
                 <div class="col-md-6">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search for..." name="recipeSearch">
@@ -56,7 +56,7 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="container">
                     <div class="row">
             <?php
-                foreach ($recipes as $recipe)
+                foreach ($db->query($query) as $recipe)
                 {
                     $recipeTitle = $recipe['recipe_title'];
                     $category = $recipe['recipe_category'];
@@ -74,31 +74,6 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                 </div>
             </div>
-            <!--
-
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body d-flex justify-content-between">
-                                    <p class="card-text">B</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body d-flex justify-content-between">
-                                    <p class="card-text">Your Tried and True</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body d-flex justify-content-between">
-                                    <p class="card-text">Plan For the Future</p>
-                                </div>
-                            </div>
-                        </div>
-
--->
         </main>
 
     </body>
