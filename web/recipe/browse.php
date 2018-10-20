@@ -16,7 +16,7 @@ else {
 }
 
 $stmt = $db->prepare($query);
-//$stmt->bindValue(':recipe_title', $recipeTitle, PDO::PARAM_STR);
+$stmt->bindValue(':recipe_title', $recipeSearch, PDO::PARAM_STR);
 $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -44,7 +44,7 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <form method="POST" action="browse.php">
                 <div class="col-md-4">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for..." name="recipeSearch">
+                        <input type="text" class="form-control" placeholder="Search by title" name="recipeSearch">
                         <span class="input-group-btn">
                             <button class="btn btn-success" type="submit">Search</button>
                         </span>
