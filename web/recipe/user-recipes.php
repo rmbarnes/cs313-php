@@ -50,8 +50,16 @@ if(isset($recipes)) {
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                        Welcome <? echo $_SESSION['username'];
-                        ?>!
+                        <?
+                        if(isset($_SESSION['username']))
+                        {
+                            echo "Welcome ".$_SESSION['username']."!";
+                        }
+                        else
+                        {
+                            echo "<p><a href='login.php'>Please login</a></p>"
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
