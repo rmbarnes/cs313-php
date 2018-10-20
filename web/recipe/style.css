@@ -19,3 +19,8 @@ body {
 .navbar.navbar-expand-md.navbar-dark.fixed-top{
     background-color: #458; /* or this nice green shade #582;*/
 }
+
+.recipe-title {
+    text-align: center;
+    font-weight: bold;
+}

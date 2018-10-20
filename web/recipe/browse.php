@@ -65,9 +65,9 @@ else {
                     echo "<div class='col-md-4'>
                             <div class='card mb-4 shadow-sm'>
                                 <div class='card-body'>
-                                    <p class='card-text'>$recipeTitle</p>
+                                    <p class='card-text recipe-title'>$recipeTitle</p>
                                     <p class='card-text'>$ingredients</p>
-                                    <p class='card-text'>$category</p>
+                                    <p class='card-text'>Category: $category</p>
                                     <p class='card-text'>Contributor: $user</p>
                                 </div>
                             </div>
