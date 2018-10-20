@@ -26,7 +26,6 @@ $stmt = $db->prepare($query);
 $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump($recipes);
 ?>
 
     <!DOCTYPE html>
@@ -50,7 +49,7 @@ var_dump($recipes);
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                        Welcome <? echo $recipes['display_name']; ?>!
+                        Welcome <? echo $recipes[0]['display_name']; ?>!
                     </div>
                 </div>
             </div>
