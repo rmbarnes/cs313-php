@@ -55,18 +55,20 @@ else {
             <div class="album py-5">
                 <div class="container">
                     <div class="row">
-            <?php
+                        <?php
                 foreach ($db->query($query) as $recipe)
                 {
                     $recipeTitle = $recipe['recipe_title'];
+                    $ingredients = $recipe['recipe_ingredients'];
                     $category = $recipe['recipe_category'];
                     $user = $recipe['display_name'];
                     echo "<div class='col-md-4'>
                             <div class='card mb-4 shadow-sm'>
-                                <div class='card-body d-flex justify-content-between'>
+                                <div class='card-body'>
                                     <p class='card-text'>$recipeTitle</p>
+                                    <p class='card-text'>$ingredients</p>
                                     <p class='card-text'>$category</p>
-                                    <p class='card-text'>$user</p>
+                                    <p class='card-text'>Contributor: $user</p>
                                 </div>
                             </div>
                         </div>";
