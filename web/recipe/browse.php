@@ -59,7 +59,7 @@ else {
                 foreach ($db->query($query) as $recipe)
                 {
                     $recipeTitle = $recipe['recipe_title'];
-                    $category = $recipe['recipe_category'];
+                    $category = $recipe['display_name'];
                     echo "<div class='col-md-4'>
                             <div class='card mb-4 shadow-sm'>
                                 <div class='card-body d-flex justify-content-between'>
