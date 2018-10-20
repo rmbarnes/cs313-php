@@ -26,6 +26,7 @@ $stmt = $db->prepare($query);
 $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+var_dump($recipes);
 ?>
 
     <!DOCTYPE html>
