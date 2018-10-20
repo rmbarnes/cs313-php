@@ -15,11 +15,10 @@ else {
     $query = 'SELECT * FROM recipe';
 }
 
-////query for all movies
-//$stmt = $db->prepare($query);
-////$stmt->bindValue(':recipe_title', $recipeTitle, PDO::PARAM_STR);
-//$stmt->execute();
-//$recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $db->prepare($query);
+//$stmt->bindValue(':recipe_title', $recipeTitle, PDO::PARAM_STR);
+$stmt->execute();
+$recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
