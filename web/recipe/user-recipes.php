@@ -24,6 +24,7 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if(isset($recipes)) {
     $_SESSION['username'] = $recipes[0]['display_name'];
+    $_SESSION['recipes'] = $recipes;
 }
 
 ?>
@@ -49,8 +50,7 @@ if(isset($recipes)) {
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                        Welcome <? echo $recipes[0]['display_name'];
-                        echo "<br>" . $_SESSION['username'];
+                        Welcome <? echo $_SESSION['username'];
                         ?>!
                     </div>
                 </div>
