@@ -16,7 +16,7 @@ else {
 }
 
 $stmt = $db->prepare($query);
-//$stmt->bindValue(':recipeSearch', $recipeSearch, PDO::PARAM_STR);
+$stmt->bindValue(':recipeSearch', $recipeSearch, PDO::PARAM_STR);
 $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
