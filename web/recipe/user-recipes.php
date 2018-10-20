@@ -23,7 +23,7 @@ $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if(isset($recipes)) {
-    $_SESSION['username'][$username] = $recipes[0]['display_name'];
+    $_SESSION['username'] = $recipes[0]['display_name'];
 }
 
 ?>
@@ -50,7 +50,7 @@ if(isset($recipes)) {
                 <div class="row">
                     <div class="col-sm">
                         Welcome <? echo $recipes[0]['display_name']; "<br>"
-                        $_SESSION['username'][$username]
+                        $_SESSION['username'];
                         ?>!
                     </div>
                 </div>
