@@ -3,10 +3,6 @@
 session_start();
 $username = htmlspecialchars($_POST["username"]);
 
-if(isset($username)) {
-    $_SESSION['username'] = $username;
-}
-
 //connect to DB
 require('../php-connect.php');
 $db = get_db();
@@ -25,6 +21,10 @@ $stmt = $db->prepare($query);
 //$stmt->bindValue(':recipeSearch', $recipeSearch, PDO::PARAM_STR);
 $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+if(isset($recipes)) {
+    $_SESSION['username'][$username] = $recipes[0]['display_name'];
+}
 
 ?>
 
@@ -49,7 +49,9 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                        Welcome <? echo $recipes[0]['display_name']; ?>!
+                        Welcome <? echo $recipes[0]['display_name']; "<br>"
+                        $_SESSION['username'][$username]
+                        ?>!
                     </div>
                 </div>
             </div>
