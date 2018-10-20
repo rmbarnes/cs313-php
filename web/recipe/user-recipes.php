@@ -3,9 +3,9 @@
 session_start();
 $username = htmlspecialchars($_POST["username"]);
 
-//if(isset($username)) {
-//    $_SESSION['username'] = $username;
-//}
+if(isset($username)) {
+    $_SESSION['username'] = $username;
+}
 
 //connect to DB
 require('../php-connect.php');
