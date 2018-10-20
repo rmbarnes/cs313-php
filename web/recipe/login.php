@@ -22,11 +22,11 @@
             </div>
 
             <div class="container col-md-8">
-                <form method="post" action="user-recipes.php">
+                <form method="POST" action="user-recipes.php">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Username</label>
-                            <input type="text" class="form-control" id="username" name="username" placeholder="JaneSmith">
+                            <input type="text" class="form-control" id="username" name="username">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="lastname">Password</label>
@@ -34,9 +34,6 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-4">
-                            <a class="btn btn-danger" href="index.php">Return to home</a>
-                        </div>
                         <div class="col-sm-4">
                             <button type="submit" class="btn btn-primary">Login</button>
                         </div>

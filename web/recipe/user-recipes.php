@@ -3,6 +3,10 @@
 session_start();
 $username = htmlspecialchars($_POST["username"]);
 
+//if(isset($username)) {
+//    $_SESSION['username'] = $username;
+//}
+
 //connect to DB
 require('../php-connect.php');
 $db = get_db();
@@ -11,7 +15,7 @@ $db = get_db();
 //go through each movie in the result
 if (isset($username))
 {
-    $query = "SELECT u.display_name, r.recipe_title FROM public.user u INNER JOIN public.recipe r ON u.id = r.user_id WHERE u.username =  "$username"";
+    $query = "SELECT u.display_name, r.recipe_title FROM public.user u INNER JOIN public.recipe r ON u.id = r.user_id WHERE u.username =  '$username'";
 }
 else {
     $query = 'SELECT * FROM recipe';
