@@ -3,14 +3,23 @@
 require('../php-connect.php');
 $db = get_db();
 
+
+//go through each movie in the result
+if (isset($_POST['recipeSearch']))
+{
+    $recipeSearch = $_POST['recipeSearch'];
+
+    $query = "SELECT r.recipe_title, r.recipe_ingredients, r.recipe_category, u.display_name FROM recipe r INNER JOIN public.user u ON r.user_id = u.id WHERE recipe_title LIKE '%$recipe%'";
+}
+else {
+    $query = 'SELECT * FROM recipe';
+}
+
 //query for all movies
-$stmt = $db->prepare('SELECT * FROM recipe');
+$stmt = $db->prepare($query);
 //$stmt->bindValue(':recipe_title', $recipeTitle, PDO::PARAM_STR);
 $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-//go through each movie in the result
-
 
 ?>
 
@@ -34,10 +43,9 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
 
             <form method="post" action="browse.php">
-                <div class="col-md-6"></div>
                 <div class="col-md-6">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for...">
+                        <input type="text" class="form-control" placeholder="Search for..." name="recipeSearch">
                         <span class="input-group-btn">
                             <button class="btn btn-success" type="submit">Search</button>
                         </span>
@@ -48,13 +56,16 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="container">
                     <div class="row">
             <?php
-                foreach ($recipes as $recipe)
+                foreach ($db->query($query) as $recipe)
                 {
                     $recipeTitle = $recipe['recipe_title'];
+                    $category = $recipe['recipe_category']
                     echo "<div class='col-md-4'>
                             <div class='card mb-4 shadow-sm'>
                                 <div class='card-body d-flex justify-content-between'>
                                     <p class='card-text'>$recipeTitle</p>
+                                    <p class='card-text'>$recipeTitle</p>
+
                                 </div>
                             </div>
                         </div>";
