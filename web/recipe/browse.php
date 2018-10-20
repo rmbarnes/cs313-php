@@ -42,12 +42,16 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
 
             <form method="POST" action="browse.php">
-                <div class="col-md-6">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for..." name="recipeSearch">
-                        <span class="input-group-btn">
+                <div class="column">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for..." name="recipeSearch">
+                                <span class="input-group-btn">
                             <button class="btn btn-success" type="submit">Search</button>
                         </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>
