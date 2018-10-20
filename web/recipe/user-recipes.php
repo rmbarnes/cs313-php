@@ -57,7 +57,7 @@ if(isset($recipes)) {
                         }
                         else
                         {
-                            echo "<p><a href='login.php'>Please login</a></p>"
+                            echo "<p><a href='login.php'>Please login</a></p>";
                         }
                         ?>
                     </div>
