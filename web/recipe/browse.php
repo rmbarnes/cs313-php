@@ -9,7 +9,7 @@ if (isset($_POST['recipeSearch']))
 {
     $recipeSearch = $_POST['recipeSearch'];
 
-    $query = "SELECT r.recipe_title, r.recipe_ingredients, r.recipe_category, u.display_name FROM recipe r INNER JOIN public.user u ON r.user_id = u.id WHERE recipe_title LIKE '%$recipe%'";
+    $query = "SELECT r.recipe_title, r.recipe_ingredients, r.recipe_category, u.display_name FROM recipe r INNER JOIN public.user u ON r.user_id = u.id WHERE recipe_title = '$recipe'";
 }
 else {
     $query = 'SELECT * FROM recipe';
