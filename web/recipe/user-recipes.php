@@ -49,8 +49,8 @@ if(isset($recipes)) {
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                        Welcome <? echo $recipes[0]['display_name']; "<br>"
-                        $_SESSION['username'];
+                        Welcome <? echo $recipes[0]['display_name'];
+                        echo "<br>" . $_SESSION['username'];
                         ?>!
                     </div>
                 </div>
