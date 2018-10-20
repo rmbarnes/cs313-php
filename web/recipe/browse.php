@@ -41,20 +41,19 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <p class="lead my-3 banner-text">We're here to help.</p>
             </div>
 
-
+            <form method="POST" action="browse.php">
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for..." name="recipeSearch">
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">Search</button>
+                        </span>
+                    </div>
+                </div>
+            </form>
             <div class="album py-5">
                 <div class="container">
                     <div class="row">
-                        <form method="POST" action="browse.php">
-                            <div class="col-md-8">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for..." name="recipeSearch">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-success" type="submit">Search</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </form>
                         <?php
                 foreach ($db->query($query) as $recipe)
                 {
