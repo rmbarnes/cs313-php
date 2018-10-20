@@ -5,13 +5,13 @@ session_start();
 //$_SESSION["cart"] = array();
 
 
-    $cartItems = $_POST['cart'];
-    if(isset($cartItems)) {
-        foreach($cartItems as $item)
-        {
-            $_SESSION['cart'][$item] = $item;
-        }
+$cartItems = $_POST['cart'];
+if(isset($cartItems)) {
+    foreach($cartItems as $item)
+    {
+        $_SESSION['cart'][$item] = $item;
     }
+}
 
 
 ?>
