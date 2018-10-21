@@ -53,7 +53,7 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="row">
                     <div class="col-sm">
                         <?
-                        if(isset($username))
+                        if(isset($_SESSION['username']))
                         {
 //                            echo "Welcome ".$_SESSION['username']."!";
                             echo "Welcome ".$recipes[0]['display_name']."!";
