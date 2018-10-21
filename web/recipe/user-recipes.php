@@ -3,6 +3,10 @@
 session_start();
 $username = htmlspecialchars($_POST["username"]);
 
+if(isset($username)) {
+    $_SESSION['username'] = $username;
+}
+
 //connect to DB
 require('../php-connect.php');
 $db = get_db();
@@ -22,10 +26,7 @@ $stmt = $db->prepare($query);
 $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-if(isset($recipes)) {
-    $_SESSION['username'] = $recipes[0]['display_name'];
-    $_SESSION['recipes'] = $recipes;
-}
+
 
 ?>
 
