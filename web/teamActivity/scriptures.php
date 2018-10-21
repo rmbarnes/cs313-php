@@ -1,6 +1,6 @@
 <?php
     require('../php-connect.php');
-
+    $db = get_db();
 
     if (isset($_POST['book']))
     {
