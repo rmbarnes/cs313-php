@@ -15,7 +15,8 @@ $db = get_db();
 //go through each movie in the result
 if (isset($username))
 {
-    $query = "SELECT u.display_name, r.recipe_title FROM public.user u INNER JOIN public.recipe r ON u.id = r.user_id WHERE u.username =  '".$_SESSION['username']."'";
+    $query = "SELECT u.display_name, r.recipe_title FROM public.user u INNER JOIN public.recipe r ON u.id = r.user_id WHERE u.username = '$username'";
+//    '".$_SESSION['username']."'";
 }
 else {
     $query = 'SELECT * FROM recipe';
@@ -54,7 +55,8 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <?
                         if(isset($_SESSION['username']))
                         {
-                            echo "Welcome ".$_SESSION['username']."!";
+//                            echo "Welcome ".$_SESSION['username']."!";
+                            echo "Welcome ".$recipes[0]['display_name']."!";
                         }
                         else
                         {
