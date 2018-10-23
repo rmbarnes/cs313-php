@@ -25,7 +25,7 @@ $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php include 'teamHeader.php';?>
         <main role="main">
             <h1>Add scripture</h1>
-            <form>
+            <form method="post" action="scriptures.php">
                 Book: <input type="text" name="book">
                 Chapter: <input type="text" name="chapter">
                 Verse: <input type="text" name="verse">
@@ -34,17 +34,12 @@ $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php
                 foreach ($topics as $topic)
                 {
-                    echo "<input type='checkbox' name='topic[]' value='$topic'>";
+                    echo $topic.": <input type='checkbox' name='topic[]' value='$topic'>";
                 }
 
                 ?>
             </form>
 
-
-            <form action="scriptures.php" method="POST">
-                Book: <input type="text" name="book">
-                <input type="submit" value="Query">
-            </form>
         </main>
 
     </body>
