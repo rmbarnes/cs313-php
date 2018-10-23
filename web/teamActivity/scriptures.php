@@ -2,6 +2,41 @@
     require('../php-connect.php');
     $db = get_db();
 
+    $book = $_POST['book'];
+    $chapter = $_POST['chapter'];
+    $verse = $_POST['verse'];
+    $content = $_POST['content'];
+    $topics = $_POST['topic'];
+
+    $someQuery = $db->prepare('INSERT INTO scriptures(book, chapter, verse, content) VALUES
+        (:book, :chapter, :verse, :content)');
+
+    $db->bindValue(":book", $book);
+    $db->bindValue(":chapter", $chapter);
+    $db->bindValue(":verse", $verse);
+    $db->bindValue(":content", $content);
+
+    $db->execute();
+
+    $scriptId = $db->lastInsertId("scriptures_id_seq");
+
+    foreach ($topics as $topicId)
+    {
+        $anotherQuery = $db->prepare('INSERT INTO topics_scriptures(script_id, topic_id) VALUES
+        (:topicId, :scriptId)');
+
+        $anotherQuery->bindValue(":topicId", $topicId);
+        $anotherQuery->bindValue(":scriptId", $scriptId);
+        $anotherQuery->execute();
+    }
+
+
+    $topicId = $db->lastInsertId("topics_id_seq");
+
+
+
+
+
     if (isset($_POST['book']))
     {
         $book = $_POST['book'];
@@ -11,6 +46,7 @@
     else {
         $query = 'SELECT book, chapter, verse, content FROM scriptures';
     }
+
 
 
 ?>

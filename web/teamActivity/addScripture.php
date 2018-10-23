@@ -39,6 +39,7 @@ $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 }
 
                 ?>
+                <input type="submit" value="Submit">
             </form>
 
         </main>
