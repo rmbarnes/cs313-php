@@ -8,7 +8,7 @@
     $content = $_POST['content'];
     $topics = $_POST['topic'];
 
-    $someQuery = $db->prepare('INSERT INTO scriptures(book, chapter, verse, content) VALUES
+    $someQuery = $db->prepare('INSERT INTO scriptures(book,     chapter, verse, content) VALUES
         (:book, :chapter, :verse, :content)');
 
     $someQuery->bindValue(":book", $book);

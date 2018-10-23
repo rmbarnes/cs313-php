@@ -35,6 +35,7 @@ $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($topics as $topic)
                 {
                     $topicId = $topic['id'];
+
                     echo $topic['name'].": <input type='checkbox' name='topic[]' value='$topicId'>";
                     echo "<br/>";
                 }
