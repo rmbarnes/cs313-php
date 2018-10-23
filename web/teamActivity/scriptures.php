@@ -11,12 +11,12 @@
     $someQuery = $db->prepare('INSERT INTO scriptures(book, chapter, verse, content) VALUES
         (:book, :chapter, :verse, :content)');
 
-    $db->bindValue(":book", $book);
-    $db->bindValue(":chapter", $chapter);
-    $db->bindValue(":verse", $verse);
-    $db->bindValue(":content", $content);
+    $someQuery->bindValue(":book", $book);
+    $someQuery->bindValue(":chapter", $chapter);
+    $someQuery->bindValue(":verse", $verse);
+    $someQuery->bindValue(":content", $content);
 
-    $db->execute();
+    $someQuery->execute();
 
     $scriptId = $db->lastInsertId("scriptures_id_seq");
 
