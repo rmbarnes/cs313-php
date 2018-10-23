@@ -2,15 +2,6 @@
 require('../php-connect.php');
 $db = get_db();
 
-if (isset($_POST['book']))
-{
-    $book = $_POST['book'];
-
-    $query = "SELECT book, chapter, verse, content FROM scriptures WHERE book = '$book'";
-}
-else {
-    $query = 'SELECT book, chapter, verse, content FROM scriptures';
-}
 
 $otherQuery = 'SELECT * FROM topics';
 $stmt = $db->prepare($otherQuery);
@@ -38,12 +29,12 @@ $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 Book: <input type="text" name="book">
                 Chapter: <input type="text" name="chapter">
                 Verse: <input type="text" name="verse">
-                Content: <textarea name="content"/>
+                Content: <textarea name="content"></textarea>
 
                 <?php
                 foreach ($topics as $topic)
                 {
-                    echo "<input type='checkbox' value='$topic'>";
+                    echo "<input type='checkbox' name='topic[]' value='$topic'>";
                 }
 
                 ?>
