@@ -31,12 +31,6 @@
     }
 
 
-    $topicId = $db->lastInsertId("topics_id_seq");
-
-
-
-
-
     if (isset($_POST['book']))
     {
         $book = $_POST['book'];
