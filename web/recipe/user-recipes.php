@@ -15,11 +15,11 @@ $db = get_db();
 //go through each movie in the result
 if (isset($username))
 {
-    $query = "SELECT u.display_name, r.recipe_title FROM public.user u INNER JOIN public.recipe r ON u.id = r.user_id WHERE u.username = '".$_SESSION['username']."'";
+    $query = "SELECT u.display_name, r.recipe_title FROM public.user u INNER JOIN public.recipe r ON u.id = r.user_id WHERE u.username = :username";
 }
 
 $stmt = $db->prepare($query);
-//$stmt->bindValue(':recipeSearch', $recipeSearch, PDO::PARAM_STR);
+$stmt->bindValue(':username', $username, PDO::PARAM_STR);
 $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
