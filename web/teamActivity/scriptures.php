@@ -12,6 +12,12 @@
         $query = 'SELECT book, chapter, verse, content FROM scriptures';
     }
 
+    $otherQuery = 'SELECT * FROM topics';
+    $db->prepare($otherQuery);
+    $db->execute();
+    $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +43,11 @@
                     echo ':' . $row['verse'].'</b>';
                     echo ' - "' . $row['content'].'"';
                     echo '<br/>';
+                    foreach ($topics as $topic)
+                    {
+                        echo '<input type="checkbox" value="'.$topic.'">';
+                    }
+
                 }
             ?>
 

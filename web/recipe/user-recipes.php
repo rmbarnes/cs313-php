@@ -23,7 +23,7 @@ $stmt->bindValue(':username', $username, PDO::PARAM_STR);
 $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
+var_dump($recipes);
 
 ?>
 

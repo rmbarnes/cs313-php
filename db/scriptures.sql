@@ -13,5 +13,16 @@ INSERT INTO scriptures(book, chapter, verse, content) VALUES ('Doctrine and Cove
 INSERT INTO scriptures(book, chapter, verse, content) VALUES ('Doctrine and Covenants', 93, 28, 'He that keepeth his commandments receiveth truth and light, until he is glorified in truth and knoweth all things.');
 INSERT INTO scriptures(book, chapter, verse, content) VALUES ('Mosiah', 16, 9, 'He is the light and the life of the world; yea, a light that is endless, that can never be darkened; yea, and also a life which is endless, that there can be no more death.');
 
+CREATE TABLE topics (
+    id SERIAL NOT NULL PRIMARY KEY,
+    name VARCHAR (50)
+);
 
+CREATE TABLE topics_scriptures (
+    script_id INT NOT NULL REFERENCES scriptures(id),
+    topic_id INT NOT NULL REFERENCES topics(id)
+);
 
+INSERT INTO topics(name) VALUES
+('faith')
+,('charity');
