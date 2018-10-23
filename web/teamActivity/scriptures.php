@@ -13,8 +13,8 @@
     }
 
     $otherQuery = 'SELECT * FROM topics';
-    $db->prepare($otherQuery);
-    $db->execute();
+    $stmt = $db->prepare($otherQuery);
+    $stmt->execute();
     $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
