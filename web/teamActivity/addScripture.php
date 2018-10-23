@@ -26,15 +26,16 @@ $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <main role="main">
             <h1>Add scripture</h1>
             <form method="post" action="scriptures.php">
-                Book: <input type="text" name="book">
-                Chapter: <input type="text" name="chapter">
-                Verse: <input type="text" name="verse">
-                Content: <textarea name="content"></textarea>
+                Book: <input type="text" name="book"><br/>
+                Chapter: <input type="text" name="chapter"><br/>
+                Verse: <input type="text" name="verse"><br/>
+                Content: <textarea name="content"></textarea><br/>
 
                 <?php
                 foreach ($topics as $topic)
                 {
-                    echo $topic.": <input type='checkbox' name='topic[]' value='$topic'>";
+                    echo $topic['name'].": <input type='checkbox' name='topic[]' value='$topic[id]'>";
+                    echo "<br/>";
                 }
 
                 ?>
