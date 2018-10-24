@@ -8,8 +8,6 @@
     $content = $_POST['content'];
     $topics = $_POST['topic'];
 
-var_dump($topics);
-
     $someQuery = $db->prepare('INSERT INTO scriptures(book,     chapter, verse, content) VALUES
         (:book, :chapter, :verse, :content)');
 
@@ -37,11 +35,11 @@ var_dump($topics);
     {
         $book = $_POST['book'];
 
-        $query = "SELECT book, chapter, verse, content FROM scriptures WHERE book = '$book'";
+        $query = "SELECT id, book, chapter, verse, content FROM scriptures WHERE book = '$book'";
 
     }
     else {
-        $query = 'SELECT book, chapter, verse, content FROM scriptures';
+        $query = 'SELECT id, book, chapter, verse, content FROM scriptures';
     }
 
 ?>
