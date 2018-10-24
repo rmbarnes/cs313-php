@@ -71,7 +71,7 @@ var_dump($topics);
                     echo '<br/>';
 
                     $topicQuery = "SELECT topic FROM topics t
-                        INNER JOIN topics_scriptures ts ON t.id = ts.topic_id  WHERE ts.scriptId = :scriptId";
+                        INNER JOIN topics_scriptures ts ON t.id = ts.topic_id  WHERE ts.script_id = :scriptId";
                     $topicQuery->bindValue(":scriptId", $row['id']);
                     $topicQuery->execute();
 
