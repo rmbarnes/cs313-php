@@ -36,12 +36,11 @@
         $book = $_POST['book'];
 
         $query = "SELECT book, chapter, verse, content FROM scriptures WHERE book = '$book'";
+
     }
     else {
         $query = 'SELECT book, chapter, verse, content FROM scriptures';
     }
-
-
 
 ?>
 
@@ -68,6 +67,16 @@
                     echo ':' . $row['verse'].'</b>';
                     echo ' - "' . $row['content'].'"';
                     echo '<br/>';
+
+                    $topicQuery = "SELECT topic FROM topics t
+                        INNER JOIN topics_scriptures ts ON t.id = ts.topic_id  WHERE ts.scriptId = :scriptId";
+                    $topicQuery->bindValue(':scriptId', $row['id']);
+                    $topicQuery->execute();
+
+                    while ($topicRow = $topicQuery->fetch(PDO::FETCH_ASSOC))
+                    {
+                        echo $topicRow['name'] . ' ';
+                    }
 
                 }
             ?>
