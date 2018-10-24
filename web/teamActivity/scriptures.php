@@ -78,7 +78,7 @@
                     {
                         echo $topicRow['name'] . ' ';
                     }
-                    echo '<br/>'
+                    echo '<br/>';
 
                 }
             ?>
