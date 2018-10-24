@@ -23,7 +23,7 @@
     foreach ($topics as $topicId)
     {
         $anotherQuery = $db->prepare('INSERT INTO topics_scriptures(script_id, topic_id) VALUES
-        (:topicId, :scriptId)');
+        (:scriptId, :topicId)');
 
         $anotherQuery->bindValue(":topicId", $topicId);
         $anotherQuery->bindValue(":scriptId", $scriptId);
