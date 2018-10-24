@@ -70,7 +70,7 @@ var_dump($topics);
                     echo ' - "' . $row['content'].'"';
                     echo '<br/>';
 
-                    $topicQuery = $db->prepare("SELECT topic FROM topics t
+                    $topicQuery = $db->prepare("SELECT name FROM topics t
                         INNER JOIN topics_scriptures ts ON t.id = ts.topic_id  WHERE ts.script_id = :scriptId");
                     $topicQuery->bindValue(':scriptId', $row['id']);
                     $topicQuery->execute();
