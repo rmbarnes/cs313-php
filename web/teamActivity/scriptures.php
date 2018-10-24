@@ -70,7 +70,7 @@
 
                     $topicQuery = "SELECT topic FROM topics t
                         INNER JOIN topics_scriptures ts ON t.id = ts.topic_id  WHERE ts.scriptId = :scriptId";
-                    $topicQuery->bindValue(:scriptId, $row['id']);
+                    $topicQuery->bindValue(":scriptId", $row[id]);
                     $topicQuery->execute();
 
                     while ($topicRow = $topicQuery->fetch(PDO::FETCH_ASSOC))
