@@ -67,6 +67,7 @@
                     echo ':' . $row['verse'].'</b>';
                     echo ' - "' . $row['content'].'"';
                     echo '<br/>';
+                    echo 'Topics: ';
 
                     $topicQuery = $db->prepare("SELECT name FROM topics t
                         INNER JOIN topics_scriptures ts ON t.id = ts.topic_id  WHERE ts.script_id = :scriptId");
@@ -77,6 +78,7 @@
                     {
                         echo $topicRow['name'] . ' ';
                     }
+                    echo '<br/>'
 
                 }
             ?>
