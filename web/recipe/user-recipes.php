@@ -44,7 +44,7 @@ if (isset($_SESSION['username']))
     var_dump($_SESSION);
 
     $stmt = $db->prepare($query);
-    $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+    $stmt->bindValue(':username', $_SESSION['username'], PDO::PARAM_STR);
     $stmt->execute();
     $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
     var_dump($recipes);
