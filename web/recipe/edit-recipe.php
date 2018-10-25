@@ -2,7 +2,6 @@
 //start the session
 session_start();
 $recipeId = $_POST['recipeId'];
- var_dump($recipeId);
 
 //connect to DB
 require('../php-connect.php');
@@ -14,7 +13,6 @@ if (isset($recipeId))
     $query = "SELECT r.recipe_title,
                     r.recipe_ingredients,
             FROM public.recipe r
-            INNER JOIN public.category c ON r.recipe_category = c.id
             WHERE r.id = :recipeId";
 }
 
