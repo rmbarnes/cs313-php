@@ -14,7 +14,7 @@ if(isset($_POST['displayName']))
     $username = htmlspecialchars($_POST['username']);
     $pass = htmlspecialchars($_POST['pass']);
 
-    $newPass = password_hash($pass);
+    $newPass = password_hash($pass, PASSWORD_DEFAULT);
 
     var_dump($newPass);
     $query = $db->prepare("INSERT INTO public.user(username, password, display_name)
