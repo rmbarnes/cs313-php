@@ -13,7 +13,6 @@ if (isset($recipeId))
 {
     $query = "SELECT r.recipe_title,
                     r.recipe_ingredients,
-                    c.recipe_category
             FROM public.recipe r
             INNER JOIN public.category c ON r.recipe_category = c.id
             WHERE r.id = :recipeId";
@@ -26,7 +25,11 @@ $recipe = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $recipeTitle = $recipe['recipe_title'];
 $ingredients = $recipe['recipe_ingredients'];
-$category = $recipe['recipe_category'];
+
+//get all categories
+$catQuery = $db->prepare("SELECT recipe_category FROM public.category");
+$catQuery->execute();
+$categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -59,13 +62,18 @@ $category = $recipe['recipe_category'];
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Ingredients: </label>
-                            <input type="text" class="form-control" id="ingredients" name="ingredients" value="<? echo $ingredients; ?>">
+                            <textarea class="form-control" id="ingredients" name="ingredients"><? echo $ingredients; ?></textarea>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Category: </label>
-
+                            <?
+                                foreach($categories as $category)
+                                {
+                                    echo "<input type='radio' name='cat' value='$category'>"
+                                }
+                            ?>
                         </div>
                     </div>
                     <div class="row">
