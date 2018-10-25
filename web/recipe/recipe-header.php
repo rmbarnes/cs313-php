@@ -17,12 +17,22 @@ session_start();
                 <a class="nav-link" href="meal-plans.php">Meal Plans</a>
             </li>
 -->
-            <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="logout.php">Logout</a>
-            </li>
+            <?php
+                if(isset($_SESSION))
+                {
+                    echo "<li class='nav-item'>
+                    <a class='nav-link' href='logout.php'>Logout</a>
+                    </li>";
+                }
+                else
+                {
+                    echo "<li class='nav-item'>
+                    <a class='nav-link' href='login.php'>Login</a>
+                    </li>";
+                }
+            ?>
+
+
         </ul>
 
     </nav>
