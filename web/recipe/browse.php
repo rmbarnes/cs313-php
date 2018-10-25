@@ -20,6 +20,7 @@ $stmt = $db->prepare($query);
 
 if (isset($recipeSearch))
 {
+    var_dump($recipeSearch);
     $stmt->bindValue(':recipeSearch', $recipeSearch, PDO::PARAM_STR);
 }
 $stmt->execute();
