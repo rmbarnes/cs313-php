@@ -16,7 +16,7 @@ if(isset($username)) {
                             WHERE username = :username");
     $query->bindValue(":username", $username, PDO::PARAM_STR);
     $query->execute();
-    $userInfo = $query->fetchAll(PDO::FETCH_ASSOC);
+    $userInfo = $query->fetch(PDO::FETCH_ASSOC);
 
     if ($userInfo['password'] != $pass)
     {
