@@ -1,7 +1,7 @@
 <?php
 //start the session
 session_start();
-$recipeId = htmlspecialchars($_POST['recipeId']);
+$recipeId = $_POST['recipeId'];
  var_dump($recipeId);
 //if(isset($username)) {
 //    $_SESSION['username'] = $username;

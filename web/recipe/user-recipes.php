@@ -78,6 +78,7 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             $category = $recipe['recipe_category'];
                             $user = $recipe['display_name'];
                             $recipeId = $recipe['id'];
+                            var_dump($recipeId);
                             echo "<div class='col-md-4'>
                                     <div class='card mb-4 shadow-sm'>
                                         <div class='card-body'>
