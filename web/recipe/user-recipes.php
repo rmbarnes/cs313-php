@@ -41,7 +41,6 @@ if (isset($_SESSION['username']))
             INNER JOIN public.recipe r ON u.id = r.user_id
             INNER JOIN public.category c ON r.recipe_category = c.id
             WHERE u.username = :username";
-    var_dump($_SESSION);
 
     $stmt = $db->prepare($query);
     $stmt->bindValue(':username', $_SESSION['username'], PDO::PARAM_STR);
@@ -83,7 +82,7 @@ if (isset($_SESSION['username']))
                         }
                         else
                         {
-                            echo "<p><a href='login.php'>Please login</a></p>";
+                            echo "<button class='btn btn-success' href='login.php'>Please login</button>";
                         }
                         ?>
                     </div>
