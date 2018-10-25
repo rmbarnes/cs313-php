@@ -82,7 +82,7 @@ if (isset($_SESSION['username']))
                         }
                         else
                         {
-                            echo "<button class='btn btn-success' href='login.php'>Please login</button>";
+                            echo "<a class='btn btn-success' href='login.php'>Please login</a>";
                         }
                         ?>
                     </div>
