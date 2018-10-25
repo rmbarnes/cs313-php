@@ -6,11 +6,13 @@ session_start();
     require('../php-connect.php');
 $db = get_db();
 
-$username = htmlspecialchars($_POST['username']);
-$pass = htmlspecialchars($_POST['pass']);
 
 
-if(isset($username)) {
+
+if(isset($_POST['username']))
+{
+    $username = htmlspecialchars($_POST['username']);
+    $pass = htmlspecialchars($_POST['pass']);
 
     $query = $db->prepare("SELECT username, password
                             FROM public.user
