@@ -16,6 +16,7 @@ if(isset($_POST['displayName']))
 
     $newPass = password_hash($pass);
 
+    var_dump($newPass);
     $query = $db->prepare("INSERT INTO public.user(username, password, display_name)
                             VALUES (:username, :password, :displayName)");
     $query->bindValue(":username", $username, PDO::PARAM_STR);
