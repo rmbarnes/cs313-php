@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <a class="navbar-brand" href="index.php">Home</a>
@@ -16,6 +20,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="login.php">Login</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="logout.php">Logout</a>
+            </li>
         </ul>
+
     </nav>
 </header>
