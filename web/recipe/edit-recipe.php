@@ -10,10 +10,10 @@ $db = get_db();
 
 if (isset($recipeId))
 {
-    $query = "SELECT r.recipe_title,
-                    r.recipe_ingredients,
-            FROM public.recipe r
-            WHERE r.id = :recipeId";
+    $query = "SELECT recipe_title,
+                    recipe_ingredients
+            FROM public.recipe
+            WHERE id = :recipeId";
 }
 
 $stmt = $db->prepare($query);
