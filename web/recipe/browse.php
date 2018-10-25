@@ -1,9 +1,32 @@
 <?php
 session_start();
-var_dump($_SESSION);
 //connect to DB
 require('../php-connect.php');
 $db = get_db();
+
+
+
+
+
+if(isset($_POST['displayName']))
+{
+    $displayName = htmlspecialchars($_POST['displayName']);
+    $username = htmlspecialchars($_POST['username']);
+    $pass = htmlspecialchars($_POST['pass']);
+
+    $query = $db->prepare("INSERT INTO public.user(username, password, display_name)
+                            VALUES (:username, :password, :displayName)");
+    $query->bindValue(":username", $username, PDO::PARAM_STR);
+    $query->bindValue(":displayName", $displayName, PDO::PARAM_STR);
+    $query->bindValue(":password", $pass, PDO::PARAM_STR);
+
+    $query->execute();
+    $userInfo = $query->fetch(PDO::FETCH_ASSOC);
+
+    $_SESSION['username'] = $username;
+}
+
+
 
 $recipeSearch = $_GET['recipeSearch'];
 
