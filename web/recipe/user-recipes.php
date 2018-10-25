@@ -77,16 +77,20 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             $ingredients = $recipe['recipe_ingredients'];
                             $category = $recipe['recipe_category'];
                             $user = $recipe['display_name'];
-                            echo "<div class='col-md-4'>
-                                    <div class='card mb-4 shadow-sm'>
-                                        <div class='card-body'>
-                                            <p class='card-text recipe-title'>$recipeTitle</p>
-                                            <p class='card-text'>$ingredients</p>
-                                            <p class='card-text'>Category: $category</p>
-                                            <p class='card-text'>Contributor: $user</p>
+                            $recipeId = $recipe['id'];
+                            echo "<form method='post' action='edit_recipe.php'>
+                                    <div class='col-md-4'>
+                                        <div class='card mb-4 shadow-sm'>
+                                            <div class='card-body'>
+                                                <p class='card-text recipe-title'>$recipeTitle</p>
+                                                <p class='card-text'>$ingredients</p>
+                                                <p class='card-text'>Category: $category</p>
+                                                <p class='card-text'>Contributor: $user</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>";
+                                    <input type='submit' name='".$recipeId."' value='Edit' class='btn btn-success'>
+                                </form>";
                         };
                         ?>
                     </div>
