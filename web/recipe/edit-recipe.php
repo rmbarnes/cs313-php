@@ -20,7 +20,7 @@ if (isset($recipeId))
 }
 
 $stmt = $db->prepare($query);
-$stmt->bindValue(':recipeId', $recipeId, PDO::PARAM_STR);
+$stmt->bindValue(':recipeId', $recipeId, PDO::PARAM_INT);
 $stmt->execute();
 $recipe = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
