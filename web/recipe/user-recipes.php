@@ -1,7 +1,6 @@
 <?php
 //start the session
 session_start();
-var_dump($_SESSION);
 
 //connect to DB
     require('../php-connect.php');
@@ -40,12 +39,15 @@ if (isset($_SESSION['username']))
             INNER JOIN public.recipe r ON u.id = r.user_id
             INNER JOIN public.category c ON r.recipe_category = c.id
             WHERE u.username = :username";
+    var_dump($_SESSION);
+
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+    $stmt->execute();
+    $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-$stmt = $db->prepare($query);
-$stmt->bindValue(':username', $username, PDO::PARAM_STR);
-$stmt->execute();
-$recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 
 ?>
 
