@@ -20,8 +20,8 @@ if (isset($username))
                     r.recipe_ingredients,
                     c.recipe_category
             FROM public.user u
-            INNER JOIN public.category c ON r.recipe_category = c.id
             INNER JOIN public.recipe r ON u.id = r.user_id
+            INNER JOIN public.category c ON r.recipe_category = c.id
             WHERE u.username = :username";
 }
 
