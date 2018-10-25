@@ -86,10 +86,11 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                 <p class='card-text'>$ingredients</p>
                                                 <p class='card-text'>Category: $category</p>
                                                 <p class='card-text'>Contributor: $user</p>
+                                                <input type='submit' name='".$recipeId."' value='Edit' class='btn btn-success'>
                                             </div>
                                         </div>
                                     </div>
-                                    <input type='submit' name='".$recipeId."' value='Edit' class='btn btn-success'>
+
                                 </form>";
                         };
                         ?>
