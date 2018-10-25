@@ -15,7 +15,12 @@ $db = get_db();
 //go through each movie in the result
 if (isset($username))
 {
-    $query = "SELECT u.display_name, r.recipe_title FROM public.user u
+    $query = "SELECT u.display_name,
+                    r.recipe_title,
+                    r.recipe_ingredients,
+                    c.recipe_category
+            FROM public.user u
+            INNER JOIN public.category c ON r.recipe_category = c.id
             INNER JOIN public.recipe r ON u.id = r.user_id
             WHERE u.username = :username";
 }
@@ -69,14 +74,19 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         foreach ($recipes as $recipe)
                         {
                             $recipeTitle = $recipe['recipe_title'];
-
+                            $ingredients = $recipe['recipe_ingredients'];
+                            $category = $recipe['recipe_category'];
+                            $user = $recipe['display_name'];
                             echo "<div class='col-md-4'>
-                            <div class='card mb-4 shadow-sm'>
-                                <div class='card-body'>
-                                    <p class='card-text recipe-title'>$recipeTitle</p>
-                                </div>
-                            </div>
-                        </div>";
+                                    <div class='card mb-4 shadow-sm'>
+                                        <div class='card-body'>
+                                            <p class='card-text recipe-title'>$recipeTitle</p>
+                                            <p class='card-text'>$ingredients</p>
+                                            <p class='card-text'>Category: $category</p>
+                                            <p class='card-text'>Contributor: $user</p>
+                                        </div>
+                                    </div>
+                                </div>";
                         };
                         ?>
                     </div>
