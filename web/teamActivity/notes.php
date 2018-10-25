@@ -30,8 +30,9 @@ $course_code = $notes[0]['code'];
 
         <ul>
             <?php
-            foreach($notes as $note) {
-                $content = $note['content']
+            foreach($notes as $note)
+            {
+                $content = $note['content'];
 
                 echo "<p>$content</p>";
             }
