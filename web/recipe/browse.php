@@ -7,7 +7,7 @@ $db = get_db();
 $recipeSearch = $_GET['recipeSearch'];
 
 //go through each movie in the result
-if (isset($_GET['recipeSearch']))
+if (isset($recipeSearch) && ($recipeSearch > 0) )
 {
     $query = "SELECT r.recipe_title, r.recipe_ingredients, c.recipe_category, u.display_name FROM recipe r INNER JOIN public.category c ON r.recipe_category = c.id INNER JOIN public.user u ON r.user_id = u.id WHERE recipe_title = :recipeSearch";
 
@@ -20,7 +20,6 @@ $stmt = $db->prepare($query);
 
 if (isset($recipeSearch))
 {
-    var_dump($recipeSearch);
     $stmt->bindValue(':recipeSearch', $recipeSearch, PDO::PARAM_STR);
 }
 $stmt->execute();
