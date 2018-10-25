@@ -61,7 +61,7 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="container">
                     <div class="row">
                         <?php
-                foreach ($db->query($query) as $recipe)
+                foreach ($recipes as $recipe)
                 {
                     $recipeTitle = $recipe['recipe_title'];
                     $ingredients = $recipe['recipe_ingredients'];
