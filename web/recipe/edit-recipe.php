@@ -79,7 +79,7 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <div class="row">
                         <div class="col-sm-4">
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-success">Update Recipe</button>
                         </div>
                     </div>
                 </form>
