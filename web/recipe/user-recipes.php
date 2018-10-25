@@ -16,6 +16,7 @@ $db = get_db();
 if (isset($username))
 {
     $query = "SELECT u.display_name,
+                    r.id
                     r.recipe_title,
                     r.recipe_ingredients,
                     c.recipe_category
