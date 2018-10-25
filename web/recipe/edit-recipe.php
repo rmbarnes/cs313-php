@@ -1,6 +1,8 @@
 <?php
 //start the session
 session_start();
+var_dump($_POST);
+var_dump($_POST['recipeId']);
 $recipeId = $_POST['recipeId'];
 
 //connect to DB
