@@ -81,7 +81,7 @@ $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             echo "<div class='col-md-4'>
                                     <div class='card mb-4 shadow-sm'>
                                         <div class='card-body'>
-                                            <form method='post' action='edit_recipe.php'>
+                                            <form method='post' action='edit-recipe.php'>
                                                 <p class='card-text recipe-title'>$recipeTitle</p>
                                                 <p class='card-text'>$ingredients</p>
                                                 <p class='card-text'>Category: $category</p>
