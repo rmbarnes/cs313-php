@@ -68,11 +68,11 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Category: </label>
-                            <?
+                            <?php
                                 foreach($categories as $category)
                                 {
-                                    echo "<input type='radio' name='cat' value='$category'>"
-                                }
+                                    echo "<input type='radio' name='cat' value='$category'>";
+                                };
                             ?>
                         </div>
                     </div>
