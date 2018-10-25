@@ -69,8 +69,9 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                             <?php
                                 foreach($categories as $category)
                                 {
-                                    echo $category;
-                                    echo " <input type='radio' name='cat' value='$category'>";
+                                    $categoryId = $category['id'];
+                                    echo " <input type='radio' name='cat' value='$categoryId'>";
+                                    echo $category['recipe_category'];
                                     echo "<br/>";
                                 };
                             ?>
