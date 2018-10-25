@@ -7,7 +7,7 @@ $db = get_db();
 $recipeSearch = $_GET['recipeSearch'];
 
 //go through each movie in the result
-if (isset($recipeSearch) && ($recipeSearch > 0) )
+if (isset($recipeSearch) && ($recipeSearch != '') )
 {
     $query = "SELECT r.recipe_title, r.recipe_ingredients, c.recipe_category, u.display_name FROM recipe r INNER JOIN public.category c ON r.recipe_category = c.id INNER JOIN public.user u ON r.user_id = u.id WHERE recipe_title = :recipeSearch";
 
