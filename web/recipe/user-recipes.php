@@ -1,7 +1,7 @@
 <?php
 //start the session
 session_start();
-$username = htmlspecialchars($_POST["username"]);
+$username = htmlspecialchars($_POST['username']);
 
 if(isset($username)) {
     $_SESSION['username'] = $username;
@@ -15,15 +15,15 @@ $db = get_db();
 //go through each movie in the result
 if (isset($username))
 {
-    $query = "SELECT u.display_name, r.recipe_title FROM public.user u INNER JOIN public.recipe r ON u.id = r.user_id WHERE u.username = :username";
+    $query = "SELECT u.display_name, r.recipe_title FROM public.user u
+            INNER JOIN public.recipe r ON u.id = r.user_id
+            WHERE u.username = :username";
 }
 
 $stmt = $db->prepare($query);
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);
 $stmt->execute();
 $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-var_dump($recipes);
 
 ?>
 
@@ -66,7 +66,7 @@ var_dump($recipes);
                 <div class="container">
                     <div class="row">
                         <?php
-                        foreach ($db->query($query) as $recipe)
+                        foreach ($recipes as $recipe)
                         {
                             $recipeTitle = $recipe['recipe_title'];
 

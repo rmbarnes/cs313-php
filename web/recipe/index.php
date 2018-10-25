@@ -3,13 +3,6 @@
 require('../php-connect.php');
 $db = get_db();
 
-//query for all movies
-$stmt = $db->prepare('SELECT id, title, year FROM movies');
-$stmt->execute();
-$movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-//go through each movie in the result
-
 
 ?>
 
