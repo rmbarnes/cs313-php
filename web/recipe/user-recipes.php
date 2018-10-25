@@ -107,7 +107,7 @@ if (isset($_SESSION['username']))
                                                 <p class='card-text'>Category: $category</p>
                                                 <p class='card-text'>Contributor: $user</p>
                                                 <input type='submit' value='Edit' class='btn btn-success'>
-                                                <input type='hidden' name='recipeId' value='$recipeId'>
+                                                <input type='hidden' name='$recipeId' value='$recipeId'>
 
                                             </form>
                                         </div>
