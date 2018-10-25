@@ -21,7 +21,7 @@ if(isset($_POST['username']))
     $query->execute();
     $userInfo = $query->fetch(PDO::FETCH_ASSOC);
 
-    if ($userInfo['password'] != $pass)
+    if (!password_verify($pass, $userInfo['password']))
     {
         header('location: login.php');
     }

@@ -14,11 +14,13 @@ if(isset($_POST['displayName']))
     $username = htmlspecialchars($_POST['username']);
     $pass = htmlspecialchars($_POST['pass']);
 
+    $newPass = password_hash($pass);
+
     $query = $db->prepare("INSERT INTO public.user(username, password, display_name)
                             VALUES (:username, :password, :displayName)");
     $query->bindValue(":username", $username, PDO::PARAM_STR);
     $query->bindValue(":displayName", $displayName, PDO::PARAM_STR);
-    $query->bindValue(":password", $pass, PDO::PARAM_STR);
+    $query->bindValue(":password", $newPass, PDO::PARAM_STR);
 
     $query->execute();
     $userInfo = $query->fetch(PDO::FETCH_ASSOC);
