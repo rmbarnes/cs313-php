@@ -18,7 +18,7 @@ else {
 
 $stmt = $db->prepare($query);
 
-if (isset($recipeSearch))
+if (isset($recipeSearch) && ($recipeSearch != '') )
 {
     $stmt->bindValue(':recipeSearch', $recipeSearch, PDO::PARAM_STR);
 }
