@@ -1,17 +1,33 @@
 <?php
 //start the session
 session_start();
+//connect to DB
+    require('../php-connect.php');
+$db = get_db();
+
 $username = htmlspecialchars($_POST['username']);
+$pass = htmlspecialchars($_POST['pass']);
+
 
 if(isset($username)) {
+
+    $query = $db->prepare("SELECT username, password
+                            FROM public.user
+                            WHERE username = :username");
+    $query->bindValue(":username", $username, PDO::PARAM_STR);
+    $query->execute();
+    $userInfo = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    if ($userInfo['password'] != $pass)
+    {
+        header('location: login.php');
+    }
     $_SESSION['username'] = $username;
 }
 
-//connect to DB
-require('../php-connect.php');
-$db = get_db();
 
-if (isset($username))
+
+if (isset($_SESSION['username']))
 {
     $query = "SELECT u.display_name,
                     r.id,

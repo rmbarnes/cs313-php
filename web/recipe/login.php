@@ -26,11 +26,11 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Username</label>
-                            <input type="text" class="form-control" id="username" name="username">
+                            <input type="text" class="form-control" id="username" name="username" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="lastname">Password</label>
-                            <input type="password" class="form-control" id="pass" name="pass">
+                            <input type="password" class="form-control" id="pass" name="pass" required>
                         </div>
                     </div>
                     <div class="row">
