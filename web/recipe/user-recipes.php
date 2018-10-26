@@ -26,7 +26,7 @@ if(isset($_POST['username']))
         header('location: login.php');
     }
     $_SESSION['username'] = $username;
-    $_SESSION['userId'] = $$userInfo['id'];
+    $_SESSION['userId'] = $userInfo['id'];
     var_dump($_SESSION['userId']);
 }
 
