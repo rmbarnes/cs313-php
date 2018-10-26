@@ -8,7 +8,6 @@ $db = get_db();
 if(isset($_SESSION['username']))
 {
     $userId = $_SESSION['userId'];
-    var_dump($userId);
     $recipeTitle = htmlspecialchars($_POST['recipeTitle']);
     $ingredients = htmlspecialchars($_POST['ingredients']);
     $cat = htmlspecialchars($_POST['cat']);
