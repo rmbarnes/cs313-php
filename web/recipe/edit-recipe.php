@@ -60,13 +60,13 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Recipe Name: </label>
-                            <input type="text" class="form-control" id="recipeTitle" name="recipeTitle" placeholder="<?php echo $recipeTitle; ?>">
+                            <input type="text" class="form-control" id="recipeTitle" name="recipeTitle" value="<?php echo $recipeTitle; ?>">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Ingredients: </label>
-                            <textarea class="form-control" id="ingredients" name="ingredients" placeholder="<?php echo $ingredients; ?>" rows="6"></textarea>
+                            <textarea class="form-control" id="ingredients" name="ingredients" rows="6"><?php echo $ingredients; ?></textarea>
                         </div>
                     </div>
                     <div class="form-row">
