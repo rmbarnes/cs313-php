@@ -26,6 +26,11 @@ if(isset($_POST['displayName']))
     $userInfo = $query->fetch(PDO::FETCH_ASSOC);
 
     $_SESSION['username'] = $username;
+} else
+{
+    $msg = "Username already exists";
+    header('location: create-user.php?msg=$msg');
+
 }
 
 

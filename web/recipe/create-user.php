@@ -1,5 +1,7 @@
 <?php
 session_start();
+$msg = GET('msg');
+
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +26,12 @@ session_start();
             <div class="container col-md-8">
                 <form method="POST" action="browse.php">
                     <div class="form-row">
+                        <?php
+                            if (isset($msg))
+                            {
+                                echo "<h1>$msg</h1>\n";
+                            }
+                        ?>
                         <div class="form-group col-md-6">
                             <label for="displayName">Display Name</label>
                             <input type="text" class="form-control" id="displayName" name="displayName" required>
