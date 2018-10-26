@@ -1,6 +1,6 @@
 <?php
 session_start();
-$msg = GET('msg');
+$msg = $_GET('msg');
 
 ?>
 
