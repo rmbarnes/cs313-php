@@ -31,7 +31,7 @@ $recipeTitle = $recipe[0]['recipe_title'];
 $ingredients = $recipe[0]['recipe_ingredients'];
 
 //get all categories
-$catQuery = $db->prepare("SELECT recipe_category FROM public.category");
+$catQuery = $db->prepare("SELECT id, recipe_category FROM public.category");
 $catQuery->execute();
 $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
 
