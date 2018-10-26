@@ -8,7 +8,6 @@ session_start();
 //$recipeId = $_POST['recipeId'];
 
 $recipeId = $_GET['id'];
-var_dump($recipeId);
 
 //connect to DB
 require('../php-connect.php');
@@ -26,9 +25,8 @@ if (isset($recipeId))
 $stmt = $db->prepare($query);
 $stmt->bindValue(':recipeId', $recipeId, PDO::PARAM_INT);
 $stmt->execute();
-$recipe = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$recipe = $stmt->fetch(PDO::FETCH_ASSOC);
 
-var_dump($recipe);
 $recipeTitle = $recipe[0]['recipe_title'];
 $ingredients = $recipe[0]['recipe_ingredients'];
 
