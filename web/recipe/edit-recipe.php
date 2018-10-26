@@ -1,11 +1,7 @@
 <?php
 //start the session
 session_start();
-//var_dump($_POST);
-//echo "<br/>";
-//var_dump($_POST['recipeId']);
-//
-//$recipeId = $_POST['recipeId'];
+$msg = $_GET['msg'];
 
 $recipeId = $_GET['id'];
 
@@ -56,6 +52,16 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                 <p class="lead my-3 banner-text">Make it even better.</p>
             </div>
             <div class="container col-md-8">
+                <div class="row">
+                    <?php
+                    if (isset($msg))
+                    {
+                        echo "<p class='error'>$msg</><br/>";
+                    }
+                    ?>
+                </div>
+            </div>
+            <div class="container col-md-8">
                 <form method="POST" action="update-recipe.php">
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -76,7 +82,7 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                                 foreach($categories as $category)
                                 {
                                     $categoryId = $category['id'];
-                                    echo "<input type='radio' name='cat' value='$categoryId'> ";
+                                    echo "<input type='radio' name='cat' value='$categoryId' required> ";
                                     echo $category['recipe_category'];
                                     echo "<br/>";
                                 };

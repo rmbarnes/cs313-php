@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-4 d-flex justify-content-between">
+                        <div class="col-md-6 d-flex justify-content-between">
                             <button type="submit" class="btn btn-primary">Login</button>
                             <a href='create-user.php' class="btn btn-secondary">Create an Account</a>
                         </div>
