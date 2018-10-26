@@ -22,15 +22,19 @@ if(isset($_POST['displayName']))
     $query->bindValue(":displayName", $displayName, PDO::PARAM_STR);
     $query->bindValue(":password", $newPass, PDO::PARAM_STR);
 
-    $query->execute();
+    try
+    {
+        $query->execute();
+    }
+    catch()
+    {
+        $msg = "Username already exists";
+        header('location: create-user.php?msg=$msg');
+    }
+
     $userInfo = $query->fetch(PDO::FETCH_ASSOC);
 
     $_SESSION['username'] = $username;
-} else
-{
-    $msg = "Username already exists";
-    header('location: create-user.php?msg=$msg');
-
 }
 
 
