@@ -26,7 +26,7 @@ if(isset($_POST['displayName']))
     {
         $query->execute();
     }
-    catch
+    catch(PDOException $Exception)
     {
         $msg = "Username already exists";
         header('location: create-user.php?msg=$msg');
