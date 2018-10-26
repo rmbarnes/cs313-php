@@ -27,8 +27,6 @@ if(isset($_POST['username']))
     $_SESSION['userId'] = $userInfo['id'];
 }
 
-
-
 if (isset($_SESSION['username']))
 {
     $query = "SELECT u.display_name,

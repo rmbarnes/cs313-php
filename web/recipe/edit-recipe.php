@@ -56,7 +56,7 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                 <p class="lead my-3 banner-text">Make it even better.</p>
             </div>
             <div class="container col-md-8">
-                <form method="POST" action="user-recipes.php">
+                <form method="POST" action="update-recipe.php">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Recipe Name: </label>
@@ -86,6 +86,7 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                     <div class="row">
                         <div class="col-sm-4">
                             <button type="submit" class="btn btn-success">Update Recipe</button>
+                            <input type="hidden" name="id" value="<?php echo $recipeId?>">
                         </div>
                     </div>
                 </form>
