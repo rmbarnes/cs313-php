@@ -37,7 +37,7 @@ if (isset($_GET['msg']))
                 </div>
             </div>
             <div class="container col-md-8">
-                <form method="POST" action="create-user.php">
+                <form method="POST" action="insert-user.php">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="displayName">Display Name</label>
