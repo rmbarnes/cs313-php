@@ -25,7 +25,7 @@ if(isset($_SESSION['username']))
     $query->bindValue(':userId', $userId, PDO::PARAM_INT);
     $query->bindValue(':recipeTitle', $recipeTitle, PDO::PARAM_STR);
     $query->bindValue(':ingredients', $ingredients, PDO::PARAM_STR);
-    $query->bindValue(':cat', $cat, PDO::PARAM_STR);
+    $query->bindValue(':cat', $cat, PDO::PARAM_INT);
 
     $query->execute();
 
