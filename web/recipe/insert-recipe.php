@@ -17,11 +17,6 @@ if(isset($_SESSION['username']))
                             VALUES (:userId, :recipeTitle, :ingredients,
                             :cat)");
 
-    var_dump($userId);
-    var_dump($recipeTitle);
-    var_dump($ingredients);
-    var_dump($cat);
-
     $query->bindValue(':userId', $userId, PDO::PARAM_INT);
     $query->bindValue(':recipeTitle', $recipeTitle, PDO::PARAM_STR);
     $query->bindValue(':ingredients', $ingredients, PDO::PARAM_STR);
