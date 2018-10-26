@@ -8,6 +8,7 @@ session_start();
 //$recipeId = $_POST['recipeId'];
 
 $recipeId = $_GET['id'];
+var_dump($recipeId);
 
 //connect to DB
 require('../php-connect.php');
