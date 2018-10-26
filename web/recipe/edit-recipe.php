@@ -28,9 +28,9 @@ $stmt->bindValue(':recipeId', $recipeId, PDO::PARAM_INT);
 $stmt->execute();
 $recipe = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$recipeTitle = $recipe['recipe_title'];
-$ingredients = $recipe['recipe_ingredients'];
-var_dump($recipeTitle);
+var_dump($recipe);
+$recipeTitle = $recipe[0]['recipe_title'];
+$ingredients = $recipe[0]['recipe_ingredients'];
 
 //get all categories
 $catQuery = $db->prepare("SELECT recipe_category FROM public.category");
