@@ -84,9 +84,10 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 d-flex justify-content-between">
                             <button type="submit" class="btn btn-success">Update Recipe</button>
                             <input type="hidden" name="id" value="<?php echo $recipeId?>">
+                            <a href="user-recipes.php" class="btn btn-secondary">Return to Recipes</a>
                         </div>
                     </div>
                 </form>
