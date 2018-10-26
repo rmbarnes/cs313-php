@@ -42,13 +42,13 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="firstname">Ingredients: </label>
+                            <label for="ingredients">Ingredients: </label>
                             <textarea class="form-control" id="ingredients" name="ingredients"></textarea>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="firstname">Category: </label><br/>
+                            <label for="category">Category: </label><br/>
                             <?php
                             foreach($categories as $category)
                             {
