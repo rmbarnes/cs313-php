@@ -20,14 +20,7 @@ $query->bindValue(':recipeTitle', $recipeTitle, PDO::PARAM_STR);
 $query->bindValue(':ingredients', $ingredients, PDO::PARAM_STR);
 $query->bindValue(':cat', $cat, PDO::PARAM_INT);
 
-try {
-    $query->execute();
-}
-catch
-{
-    $msg = "Must choose a category";
-    header("location: edit-recipe.php?msg=$msg");
-}
+
 header('location: user-recipes.php');
 
 ?>

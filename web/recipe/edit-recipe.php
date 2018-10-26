@@ -51,16 +51,7 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                 <h1 class="display-4 font-italic banner-text">Edit your recipe</h1>
                 <p class="lead my-3 banner-text">Make it even better.</p>
             </div>
-            <div class="container col-md-8">
-                <div class="row">
-                    <?php
-                    if (isset($msg))
-                    {
-                        echo "<p class='error'>$msg</><br/>";
-                    }
-                    ?>
-                </div>
-            </div>
+
             <div class="container col-md-8">
                 <form method="POST" action="update-recipe.php">
                     <div class="form-row">
