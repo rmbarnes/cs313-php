@@ -14,7 +14,7 @@ if(isset($_POST['username']))
     $username = htmlspecialchars($_POST['username']);
     $pass = htmlspecialchars($_POST['pass']);
 
-    $query = $db->prepare("SELECT username, password
+    $query = $db->prepare("SELECT id, username, password
                             FROM public.user
                             WHERE username = :username");
     $query->bindValue(":username", $username, PDO::PARAM_STR);
@@ -26,6 +26,7 @@ if(isset($_POST['username']))
         header('location: login.php');
     }
     $_SESSION['username'] = $username;
+    $_SESSION['userId'] = $$userInfo['id'];
 }
 
 
