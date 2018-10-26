@@ -77,7 +77,7 @@ if (isset($_SESSION['username']))
                         {
 //                            echo "Welcome ".$_SESSION['username']."!";
                             echo "Welcome ".$recipes[0]['display_name']."!";
-                            echo "\n<a class='btn btn-success' href='add-recipe.php'>Add Recipe</a>"
+                            echo "\n<a class='btn btn-success' href='add-recipe.php'>Add Recipe</a>";
                         }
                         else
                         {
