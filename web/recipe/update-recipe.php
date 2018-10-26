@@ -16,9 +16,9 @@ $query = $db->prepare("UPDATE public.recipe
                         WHERE id = :recipeId");
 
 $query->bindValue(':recipeId', $recipeId, PDO::PARAM_INT);
-$query->bindValue(':recipeTitle', $recipeTitle, PDO::PARAM_INT);
-$query->bindValue(':ingredients', $ingredients, PDO::PARAM_INT);
-$query->bindValue(':cat', $cat, PDO::PARAM_INT);
+$query->bindValue(':recipeTitle', $recipeTitle, PDO::PARAM_STR);
+$query->bindValue(':ingredients', $ingredients, PDO::PARAM_STR);
+$query->bindValue(':cat', $cat, PDO::PARAM_STR);
 
 $query->execute();
 
