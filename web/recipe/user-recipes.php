@@ -72,7 +72,7 @@ if (isset($_SESSION['username']))
                         <?php
                         if(isset($_SESSION['username']))
                         {
-                            echo "Welcome ".$recipes[0]['display_name']."!";
+                            echo "Welcome ".$_SESSION['username']."!";
                             echo "\n<a class='btn btn-success' href='add-recipe.php'>Add Recipe</a>";
                         }
                         else
