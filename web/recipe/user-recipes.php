@@ -112,6 +112,7 @@ if (isset($_SESSION['username']))
                                                 <input type='submit' value='Edit' class='btn btn-success'>
                                                 <input type='hidden' name='recipeId' value='$recipeId'>
                                             </form>
+                                            <a href='delete-recipe.php?id=$recipeId' value='Delete' class='btn btn-danger'></a>
                                         </div>
                                     </div>
                                 </div>";
