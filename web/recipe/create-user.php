@@ -32,7 +32,7 @@ if (isset($_GET['msg']))
                         <?php
                             if (isset($msg))
                             {
-                                echo "<h1>$msg</h1>\n";
+                                echo "<p class='error'>$msg</><br/>";
                             }
                         ?>
                         <div class="form-group col-md-6">

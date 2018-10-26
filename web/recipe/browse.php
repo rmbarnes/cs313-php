@@ -29,7 +29,7 @@ if(isset($_POST['displayName']))
     catch(PDOException $Exception)
     {
         $msg = "Username already exists";
-        header('location: create-user.php?msg=$msg');
+        header("location: create-user.php?msg=$msg");
     }
 
     $userInfo = $query->fetch(PDO::FETCH_ASSOC);
