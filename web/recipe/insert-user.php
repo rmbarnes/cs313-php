@@ -4,8 +4,6 @@ session_start();
 require('../php-connect.php');
 $db = get_db();
 
-if(isset($_POST['displayName']))
-{
 $displayName = htmlspecialchars($_POST['displayName']);
 $username = htmlspecialchars($_POST['username']);
 $pass = htmlspecialchars($_POST['pass']);
@@ -30,7 +28,7 @@ $query->bindValue(":password", $newPass, PDO::PARAM_STR);
 
 
 $_SESSION['username'] = $username;
-}
+
 header('location: browse.php');
 
 ?>
