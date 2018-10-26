@@ -4,9 +4,6 @@ session_start();
 require('../php-connect.php');
 $db = get_db();
 
-
-
-
 $recipeSearch = $_GET['recipeSearch'];
 
 //go through each movie in the result

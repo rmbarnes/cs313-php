@@ -13,7 +13,7 @@ $pass = htmlspecialchars($_POST['pass']);
 $newPass = password_hash($pass, PASSWORD_DEFAULT);
 
 $query = $db->prepare("INSERT INTO public.user(username, password, display_name)
-VALUES (:username, :password, :displayName)");
+                        VALUES (:username, :password, :displayName)");
 $query->bindValue(":username", $username, PDO::PARAM_STR);
 $query->bindValue(":displayName", $displayName, PDO::PARAM_STR);
 $query->bindValue(":password", $newPass, PDO::PARAM_STR);
@@ -28,17 +28,7 @@ $query->bindValue(":password", $newPass, PDO::PARAM_STR);
         header("location: create-user.php?msg=$msg");
     }
 
-$userInfo = $query->fetch(PDO::FETCH_ASSOC);
 
-$idQuery = $db->prepare("SELECT id FROM public.user
-                        WHERE username = :username");
-$idQuery->bindValue(":username", $username, PDO::PARAM_STR);
-$idQuery->execute();
-$userId = $idQuery->fetchAll(PDO::FETCH_ASSOC);
-
-    var_dump($userId[0]['id']);
-
-$_SESSION['id'] = $userId[0]['id'];
 $_SESSION['username'] = $username;
 }
 header('location: browse.php');

@@ -7,8 +7,6 @@ require('../php-connect.php');
 $db = get_db();
 
 
-
-
 if(isset($_POST['username']))
 {
     $username = htmlspecialchars($_POST['username']);
