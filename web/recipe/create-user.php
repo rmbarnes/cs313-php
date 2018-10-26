@@ -7,7 +7,7 @@ session_start();
 
     <head>
         <meta charset="utf-8">
-        <title>Cooking Moms | Login</title>
+        <title>Cooking Moms | Create Account</title>
         <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.3/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>

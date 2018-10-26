@@ -56,7 +56,7 @@ if (isset($_SESSION['username']))
 
     <head>
         <meta charset="utf-8">
-        <title>Cooking Moms | Home</title>
+        <title>Cooking Moms | Your Recipes</title>
         <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.3/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
@@ -71,7 +71,7 @@ if (isset($_SESSION['username']))
             </div>
             <div class="container text-center">
                 <div class="row">
-                    <div class="col-sm">
+                    <div class="col-sm d-flex justify-content-between">
                         <?php
                         if(isset($_SESSION['username']))
                         {
