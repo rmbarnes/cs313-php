@@ -9,10 +9,10 @@ $recipeTitle = htmlspecialchars($_POST['recipeTitle']);
 $ingredients = htmlspecialchars($_POST['ingredients']);
 $cat = htmlspecialchars($_POST['cat']);
 
-//var_dump($recipeId);
-//var_dump($recipeTitle);
-//var_dump($ingredients);
-//var_dump($cat);
+var_dump($recipeId);
+var_dump($recipeTitle);
+var_dump($ingredients);
+var_dump($cat);
 
 $query = $db->prepare("UPDATE public.recipe
                         SET (recipe_title, recipe_ingredients, recipe_category)
