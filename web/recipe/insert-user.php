@@ -4,10 +4,6 @@ session_start();
 require('../php-connect.php');
 $db = get_db();
 
-
-
-
-
 if(isset($_POST['displayName']))
 {
 $displayName = htmlspecialchars($_POST['displayName']);
@@ -40,6 +36,7 @@ $idQuery->bindValue(":username", $username, PDO::PARAM_STR);
 $idQuery->execute();
 $userId = $idQuery->fetch(PDO::FETCH_ASSOC);
 
+    var_dump($userId['id']);
 
 $_SESSION['id'] = $userId['id'];
 $_SESSION['username'] = $username;
