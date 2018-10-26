@@ -60,7 +60,6 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Recipe Name: </label>
-                            <?php var_dump($recipeTitle); ?>
                             <input type="text" class="form-control" id="recipeTitle" name="recipeTitle" placeholder="<?php echo $recipeTitle; ?>">
                         </div>
                     </div>

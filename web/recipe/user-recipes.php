@@ -76,7 +76,6 @@ if (isset($_SESSION['username']))
                         <?php
                         if(isset($_SESSION['username']))
                         {
-//                            echo "Welcome ".$_SESSION['username']."!";
                             echo "Welcome ".$recipes[0]['display_name']."!";
                             echo "\n<a class='btn btn-success' href='add-recipe.php'>Add Recipe</a>";
                         }
@@ -99,7 +98,6 @@ if (isset($_SESSION['username']))
                             $category = $recipe['recipe_category'];
                             $user = $recipe['display_name'];
                             $recipeId = $recipe['id'];
-                            var_dump($recipeId);
                             echo "<div class='col-md-4'>
                                     <div class='card mb-4 shadow-sm'>
                                         <div class='card-body'>
