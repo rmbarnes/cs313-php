@@ -66,7 +66,7 @@ $categories = $catQuery->fetchAll(PDO::FETCH_ASSOC);
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Ingredients: </label>
-                            <textarea class="form-control" id="ingredients" name="ingredients" placeholder="<?php echo $ingredients; ?>"></textarea>
+                            <textarea class="form-control" id="ingredients" name="ingredients" placeholder="<?php echo $ingredients; ?>" rows="6"></textarea>
                         </div>
                     </div>
                     <div class="form-row">
