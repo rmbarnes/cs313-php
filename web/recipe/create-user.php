@@ -27,14 +27,18 @@ if (isset($_GET['msg']))
             </div>
 
             <div class="container col-md-8">
+                <div class="row">
+                    <?php
+                    if (isset($msg))
+                    {
+                        echo "<p class='error'>$msg</><br/>";
+                    }
+                    ?>
+                </div>
+            </div>
+            <div class="container col-md-8">
                 <form method="POST" action="browse.php">
                     <div class="form-row">
-                        <?php
-                            if (isset($msg))
-                            {
-                                echo "<p class='error'>$msg</><br/>";
-                            }
-                        ?>
                         <div class="form-group col-md-6">
                             <label for="displayName">Display Name</label>
                             <input type="text" class="form-control" id="displayName" name="displayName" required>
