@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (isset($_GET['msg'])
-    {
-        $msg = $_GET['msg'];
-    }
+if (isset($_GET['msg']))
+{
+    $msg = $_GET['msg'];
+}
 
 ?>
 
