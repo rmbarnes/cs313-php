@@ -37,6 +37,9 @@
                         <div class="col-sm-4">
                             <button type="submit" class="btn btn-primary">Login</button>
                         </div>
+                        <div class="col-sm-4">
+                            <a href='create-user.php' class="btn btn-primary">Create an Account</a>
+                        </div>
                     </div>
                 </form>
 
