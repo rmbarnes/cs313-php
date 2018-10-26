@@ -104,13 +104,13 @@ if (isset($_SESSION['username']))
                             echo "<div class='col-md-4'>
                                     <div class='card mb-4 shadow-sm'>
                                         <div class='card-body'>
-                                            <form method='get' action='edit-recipe.php'>
+                                            <form method='post' action='edit-recipe.php'>
                                                 <p class='card-text recipe-title'>$recipeTitle</p>
                                                 <p class='card-text'>$ingredients</p>
                                                 <p class='card-text'>Category: $category</p>
                                                 <p class='card-text'>Contributor: $user</p>
                                                 <input type='submit' value='Edit' class='btn btn-success'>
-                                                <input type='hidden' name='recipeId' value=$recipeId>
+                                                <input type='hidden' name='recipeId' value='$recipeId'>
                                             </form>
                                             <a href='delete-recipe.php?id=$recipeId' value='Delete' class='btn btn-danger'>Delete</a>
                                         </div>

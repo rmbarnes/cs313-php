@@ -1,11 +1,11 @@
 <?php
 //start the session
 session_start();
-var_dump($_GET);
+var_dump($_POST);
 echo "<br/>";
-var_dump($_GET['recipeId']);
+var_dump($_POST['recipeId']);
 
-$recipeId = $_GET['recipeId'];
+$recipeId = $_POST['recipeId'];
 
 //connect to DB
 require('../php-connect.php');
