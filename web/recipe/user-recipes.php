@@ -27,7 +27,6 @@ if(isset($_POST['username']))
     }
     $_SESSION['username'] = $username;
     $_SESSION['userId'] = $userInfo['id'];
-    var_dump($_SESSION['userId']);
 }
 
 
