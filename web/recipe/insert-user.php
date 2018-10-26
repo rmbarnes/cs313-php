@@ -34,11 +34,11 @@ $idQuery = $db->prepare("SELECT id FROM public.user
                         WHERE username = :username");
 $idQuery->bindValue(":username", $username, PDO::PARAM_STR);
 $idQuery->execute();
-$userId = $idQuery->fetch(PDO::FETCH_ASSOC);
+$userId = $idQuery->fetchAll(PDO::FETCH_ASSOC);
 
-    var_dump($userId['id']);
+    var_dump($userId[0]['id']);
 
-$_SESSION['id'] = $userId['id'];
+$_SESSION['id'] = $userId[0]['id'];
 $_SESSION['username'] = $username;
 }
 header('location: browse.php');
