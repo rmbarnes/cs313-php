@@ -25,7 +25,7 @@ if (isset($recipeId))
 $stmt = $db->prepare($query);
 $stmt->bindValue(':recipeId', $recipeId, PDO::PARAM_INT);
 $stmt->execute();
-$recipe = $stmt->fetch(PDO::FETCH_ASSOC);
+$recipe = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $recipeTitle = $recipe[0]['recipe_title'];
 $ingredients = $recipe[0]['recipe_ingredients'];
