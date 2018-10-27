@@ -20,7 +20,7 @@ $query->bindValue(':recipeTitle', $recipeTitle, PDO::PARAM_STR);
 $query->bindValue(':ingredients', $ingredients, PDO::PARAM_STR);
 $query->bindValue(':cat', $cat, PDO::PARAM_INT);
 
-
+$query->execute();
 header('location: user-recipes.php');
 
 ?>
