@@ -4,13 +4,13 @@ session_start();
 require('../php-connect.php');
 $db = get_db();
 
-echo "var dump: ";
-var_dump($_SESSION['username']);
+//echo "var dump: ";
+//var_dump($_SESSION['username']);
 if(isset($_SESSION['username']))
 {
     $userId = $_SESSION['userId'];
-    echo "$ userid ";
-    var_dump($userId);
+//    echo "$ userid ";
+//    var_dump($userId);
     $recipeTitle = htmlspecialchars($_POST['recipeTitle']);
     $ingredients = htmlspecialchars($_POST['ingredients']);
     $cat = htmlspecialchars($_POST['cat']);
