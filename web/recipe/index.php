@@ -52,10 +52,10 @@ $db = get_db();
                         </div>
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
-                                <a href="meal-plans.php">
+                                <a href="create-user.php">
                                     <img class="card-img-top" alt="Thumbnail [100%x225]" src="../images/joseph-gonzalez-346674-unsplash.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                                     <div class="card-body d-flex justify-content-between">
-                                        <p class="card-text">Plan For the Future</p>
+                                        <p class="card-text">Create Your Account</p>
                                     </div>
                                 </a>
                             </div>
