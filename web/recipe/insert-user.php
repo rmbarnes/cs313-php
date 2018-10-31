@@ -27,7 +27,7 @@ $query->bindValue(":password", $newPass, PDO::PARAM_STR);
         die();
     }
 
-$idQuery = $db->prepare("SELECT id FROM public.user WHERE username = :username)");
+$idQuery = $db->prepare("SELECT id FROM public.user WHERE username = :username");
 $idQuery->bindValue(":username", $username, PDO::PARAM_STR);
 $idQuery->execute();
 $idArray = $idQuery->fetch(PDO::FETCH_ASSOC);
