@@ -22,5 +22,6 @@ $query->bindValue(':cat', $cat, PDO::PARAM_INT);
 
 $query->execute();
 header('location: user-recipes.php');
+die();
 
 ?>

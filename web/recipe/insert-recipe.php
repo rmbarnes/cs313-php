@@ -29,5 +29,6 @@ if(isset($_SESSION['username']))
 
 }
 header('location: user-recipes.php');
+die();
 
 ?>

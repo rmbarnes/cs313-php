@@ -24,11 +24,18 @@ $query->bindValue(":password", $newPass, PDO::PARAM_STR);
     {
         $msg = "Username already exists";
         header("location: create-user.php?msg=$msg");
+        die();
     }
 
+$idQuery = $db->prepare("SELECT id FROM public.user WHERE username = :username)");
+$idQuery->bindValue(":username", $username, PDO::PARAM_STR);
+$idQuery->execute();
+$idArray = $idQuery->fetch(PDO::FETCH_ASSOC);
 
 $_SESSION['username'] = $username;
+$_SESSION['userId'] = $idArray['id'];
 
 header('location: browse.php');
+die();
 
 ?>

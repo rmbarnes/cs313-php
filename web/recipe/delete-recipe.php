@@ -16,5 +16,6 @@ $query->bindValue(':recipeId', $recipeId, PDO::PARAM_INT);
 $query->execute();
 
 header('location: user-recipes.php');
+die();
 
 ?>

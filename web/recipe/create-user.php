@@ -22,8 +22,8 @@ if (isset($_GET['msg']))
         <main role="main">
 
             <div class="bg">
-                <h1 class="display-4 font-italic banner-text">Login for full access</h1>
-                <p class="lead my-3 banner-text">Go ahead, sign in.</p>
+                <h1 class="display-4 font-italic banner-text">Create an Account</h1>
+                <p class="lead my-3 banner-text">Go ahead, create one.</p>
             </div>
 
             <div class="container col-md-8">

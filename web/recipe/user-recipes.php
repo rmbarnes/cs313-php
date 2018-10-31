@@ -22,6 +22,7 @@ if(isset($_POST['username']))
     if (!password_verify($pass, $userInfo['password']))
     {
         header('location: login.php');
+        die();
     }
     $_SESSION['username'] = $username;
     $_SESSION['userId'] = $userInfo['id'];
