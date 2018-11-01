@@ -50,7 +50,7 @@ INSERT INTO public.user (username, password, display_name) VALUES
 , ('a_parson', 'pass123', 'Alison Parson');
 
 INSERT INTO meal_plan(user_id, start_date, end_date) VALUES
-(19, '2018-10-22', '2018-10-29')
+(19, '2018-10-15', '2018-10-21')
 , (19, '2018-10-22', '2018-10-29');
 
 INSERT INTO public.category(recipe_category) VALUES

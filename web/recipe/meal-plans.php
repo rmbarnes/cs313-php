@@ -19,6 +19,8 @@ $stmt->bindValue(':userId', $_SESSION['id'], PDO::PARAM_INT);
 $stmt->execute();
 $mealPlan = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+var_dump($mealPlan);
+
 ?>
 
 <!DOCTYPE html>
@@ -44,11 +46,11 @@ $mealPlan = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="container">
                     <div class="row">
                         <?php
-                        foreach ($mealPlan as $plan)
-                        {
-                            $start = $plan['start_date'];
-                            $end = $plan['end_date'];
-                            $recipe = $plan['recipe_title'];
+//                        foreach ($mealPlan as $plan)
+//                        {
+                            $start = $mealPlan['start_date'];
+                            $end = $mealPlan['end_date'];
+                            $recipe = $mealPlan['recipe_title'];
 
                             echo "<div class='col-md-4'>
                             <div class='card mb-4 shadow-sm'>
@@ -58,7 +60,7 @@ $mealPlan = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 </div>
                             </div>
                         </div>";
-                        };
+//                        };
                         ?>
                     </div>
                 </div>
