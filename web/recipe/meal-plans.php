@@ -46,8 +46,8 @@ var_dump($mealPlan);
                 <div class="container">
                     <div class="row">
                         <?php
-//                        foreach ($mealPlan as $plan)
-//                        {
+                        foreach ($mealPlan as $plan)
+                        {
                             $start = $mealPlan['start_date'];
                             $end = $mealPlan['end_date'];
                             $recipe = $mealPlan['recipe_title'];
@@ -60,7 +60,7 @@ var_dump($mealPlan);
                                 </div>
                             </div>
                         </div>";
-//                        };
+                        };
                         ?>
                     </div>
                 </div>
