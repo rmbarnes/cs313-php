@@ -48,8 +48,8 @@ var_dump($mealPlan);
                         <?php
                         foreach ($mealPlan as $plan)
                         {
-                            $start = strtotime($plan['start_date']);
-                            $end = strtotime($plan['end_date']);
+                            $start = date('M d', strtotime($plan['start_date']));
+                            $end = date('M d', strtotime($plan['end_date']));
                             $recipe = $plan['recipe_title'];
 
                             echo "<div class='col-md-4'>
