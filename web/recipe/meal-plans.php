@@ -48,9 +48,9 @@ var_dump($mealPlan);
                         <?php
                         foreach ($mealPlan as $plan)
                         {
-                            $start = $mealPlan['start_date'];
-                            $end = $mealPlan['end_date'];
-                            $recipe = $mealPlan['recipe_title'];
+                            $start = $plan['start_date'];
+                            $end = $plan['end_date'];
+                            $recipe = $plan['recipe_title'];
 
                             echo "<div class='col-md-4'>
                             <div class='card mb-4 shadow-sm'>
