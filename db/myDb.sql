@@ -50,8 +50,8 @@ INSERT INTO public.user (username, password, display_name) VALUES
 , ('a_parson', 'pass123', 'Alison Parson');
 
 INSERT INTO meal_plan(user_id, start_date, end_date) VALUES
-(1, '2018-10-22', '2018-10-29')
-, (2, '2018-10-22', '2018-10-29');
+(19, '2018-10-22', '2018-10-29')
+, (19, '2018-10-22', '2018-10-29');
 
 INSERT INTO public.category(recipe_category) VALUES
 ('Desserts')
@@ -85,3 +85,8 @@ INSERT INTO public.recipe(user_id, recipe_title, recipe_ingredients, recipe_cate
 INSERT INTO meal_plan_recipe(recipe_id, meal_plan_id) VALUES
 (1,2)
 , (2,1);
+
+INSERT INTO meal_plan_recipe(recipe_id, meal_plan_id) VALUES
+(1,3)
+, (2,4)
+, (3,3);

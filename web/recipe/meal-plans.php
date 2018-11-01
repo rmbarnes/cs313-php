@@ -4,7 +4,7 @@ session_start();
 require('../php-connect.php');
 $db = get_db();
 
-if (isset($_SESSION['id']))
+if (isset($_SESSION['userId']))
 {
     $query = "SELECT m.start_date, m.end_date, r.recipe_title FROM meal_plan m
             INNER JOIN meal_plan_recipe mr ON m.id = mr.meal_plan_id
