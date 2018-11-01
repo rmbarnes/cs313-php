@@ -11,7 +11,7 @@ if (isset($_SESSION['id']))
             INNER JOIN recipe r ON mr.recipe.id = r.id WHERE m.user_id = :userId";
 }
 else {
-    header('location: /login.php');
+    header('location: login.php');
 }
 
 $stmt = $db->prepare($query);
