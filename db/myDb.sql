@@ -90,3 +90,34 @@ INSERT INTO meal_plan_recipe(recipe_id, meal_plan_id) VALUES
 (1,3)
 , (2,4)
 , (3,3);
+
+
+SELECT
+  meal_plan.id                AS meal_plan_id,
+  meal_plan_user.id           AS meal_plan_user_id,
+  meal_plan_user.display_name AS meal_plan_user_display_name,
+  jsonb_agg(
+      jsonb_build_object(
+          'recipe_id',                recipe.id,
+          'recipe_user_id',           recipe_user.id,
+          'recipe_user_display_name', recipe_user.display_name,
+          'recipe_title',             recipe.recipe_title
+      )
+  ) AS recipes
+FROM meal_plan
+INNER JOIN meal_plan_recipe
+  ON meal_plan.id = meal_plan_recipe.meal_plan_id
+INNER JOIN public.user AS meal_plan_user
+  ON meal_plan.user_id = meal_plan_user.id
+INNER JOIN recipe
+  ON meal_plan_recipe.recipe_id = recipe.id
+INNER JOIN public.user AS recipe_user
+  ON recipe.user_id = recipe_user.id
+INNER JOIN category
+  ON recipe.recipe_category = category.id
+  WHERE meal_plan_user.id = 19
+GROUP BY
+  meal_plan.id,
+  meal_plan_user.id,
+  meal_plan_user.display_name;
+
