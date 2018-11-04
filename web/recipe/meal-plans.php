@@ -73,7 +73,7 @@ var_dump($mealPlan);
                         <?php
                         foreach ($mealPlan as $plan)
                         {
-                            var_dump($plan['recipes[0].recipe_title']);
+                            var_dump($plan['recipes[0]']);
                             echo "\n";
                             $start = date('M d', strtotime($plan['start_date']));
                             $end = date('M d', strtotime($plan['end_date']));
