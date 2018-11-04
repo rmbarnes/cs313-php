@@ -46,22 +46,6 @@ $mealPlan = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 var_dump($mealPlan);
 
-
-
-
-// Select all meal plans
-$planQuery = 'SELECT m.start_date, m.end_date, m.id FROM meal_plan m
-    INNER JOIN meal_plan_recipe mr ON m.id = mr.meal_plan_id
-    WHERE m.user_id = :userId';
-
-// Select all recipes from each meal plan
-
-
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -89,6 +73,8 @@ $planQuery = 'SELECT m.start_date, m.end_date, m.id FROM meal_plan m
                         <?php
                         foreach ($mealPlan as $plan)
                         {
+                            var_dump($plan);
+                            echo "\n";
                             $start = date('M d', strtotime($plan['start_date']));
                             $end = date('M d', strtotime($plan['end_date']));
                             $recipe = $plan['recipe_title'];
