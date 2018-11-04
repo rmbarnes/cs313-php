@@ -13,7 +13,7 @@ if (isset($_SESSION['userId']))
               meal_plan.start_date AS start_date,
               meal_plan.end_date AS end_date,
               recipe.id,
-              recipe.recipe_title,
+              recipe.recipe_title
 
             FROM meal_plan
             INNER JOIN meal_plan_recipe
