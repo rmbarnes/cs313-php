@@ -14,12 +14,7 @@ if (isset($_SESSION['userId']))
               meal_plan.end_date AS end_date,
               recipe.id,
               recipe.recipe_title,
-              jsonb_agg(
-                  jsonb_build_object(
-                      'recipe_id',                recipe.id,
-                      'recipe_title',             recipe.recipe_title
-                  )
-              ) AS recipes
+
             FROM meal_plan
             INNER JOIN meal_plan_recipe
               ON meal_plan.id = meal_plan_recipe.meal_plan_id
@@ -41,6 +36,13 @@ if (isset($_SESSION['userId']))
 else {
     header('location: login.php');
 }
+
+//jsonb_agg(
+//    jsonb_build_object(
+//        'recipe_id',                recipe.id,
+//        'recipe_title',             recipe.recipe_title
+//    )
+//) AS recipes
 
 $stmt = $db->prepare($query);
 $stmt->bindValue(':userId', $_SESSION['userId'], PDO::PARAM_INT);
@@ -76,7 +78,7 @@ var_dump($mealPlan);
                         <?php
                         foreach ($mealPlan as $plan)
                         {
-                            var_dump($plan['recipes[0].recipe_title']);
+                            var_dump($plan['recipe_title']);
                             echo "\n";
                             $start = date('M d', strtotime($plan['start_date']));
                             $end = date('M d', strtotime($plan['end_date']));
