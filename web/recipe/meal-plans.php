@@ -30,8 +30,7 @@ if (isset($_SESSION['userId']))
             GROUP BY
               meal_plan.id,
               meal_plan_user.id,
-              meal_plan_user.display_name,
-              recipe.id;";
+              meal_plan_user.display_name;";
 }
 else {
     header('location: login.php');
