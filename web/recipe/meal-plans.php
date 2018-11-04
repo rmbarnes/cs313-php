@@ -12,6 +12,8 @@ if (isset($_SESSION['userId']))
               meal_plan_user.display_name AS meal_plan_user_display_name,
               meal_plan.start_date AS start_date,
               meal_plan.end_date AS end_date,
+              recipe_id AS recipe.id,
+              recipe_title AS recipe.recipe_title,
               jsonb_agg(
                   jsonb_build_object(
                       'recipe_id',                recipe.id,
@@ -73,7 +75,7 @@ var_dump($mealPlan);
                         <?php
                         foreach ($mealPlan as $plan)
                         {
-                            var_dump($plan['recipes[].recipe_title']);
+                            var_dump($plan['recipes[0].recipe_title']);
                             echo "\n";
                             $start = date('M d', strtotime($plan['start_date']));
                             $end = date('M d', strtotime($plan['end_date']));
