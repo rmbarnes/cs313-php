@@ -12,11 +12,9 @@ session_start();
             <li class="nav-item">
                 <a class="nav-link" href="user-recipes.php">My Recipes</a>
             </li>
-<!--
             <li class="nav-item">
                 <a class="nav-link" href="meal-plans.php">Meal Plans</a>
             </li>
--->
             <?php
                 if(isset($_SESSION['username']))
                 {
