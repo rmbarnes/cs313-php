@@ -13,8 +13,6 @@ if (isset($_SESSION['userId']))
               jsonb_agg(
                   jsonb_build_object(
                       'recipe_id',                recipe.id,
-                      'recipe_user_id',           recipe_user.id,
-                      'recipe_user_display_name', recipe_user.display_name,
                       'recipe_title',             recipe.recipe_title
                   )
               ) AS recipes
