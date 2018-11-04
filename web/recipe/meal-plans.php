@@ -10,6 +10,8 @@ if (isset($_SESSION['userId']))
               meal_plan.id                AS meal_plan_id,
               meal_plan_user.id           AS meal_plan_user_id,
               meal_plan_user.display_name AS meal_plan_user_display_name,
+              meal_plan_recipe.start_date AS start_date,
+              meal_plan_recipe.end_date AS end_date,
               jsonb_agg(
                   jsonb_build_object(
                       'recipe_id',                recipe.id,
