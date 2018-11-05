@@ -73,12 +73,12 @@ var_dump($mealPlan);
                         <?php
                         foreach ($mealPlan as $plan)
                         {
-                            $recipes = json_decode($plan->recipes);
+                            $recipes = json_decode($plan['recipes']);
                             var_dump($recipes);
 
                             foreach($recipes as $recipe)
                             {
-                                echo $recipe['recipe_title'] . '<br>';
+                                echo $recipe->recipe_title . '<br>';
                             }
                             echo "\n";
                             $start = date('M d', strtotime($plan['start_date']));
