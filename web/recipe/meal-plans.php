@@ -75,6 +75,11 @@ var_dump($mealPlan);
                         {
                             $recipes = json_decode($plan['recipes']);
                             var_dump($recipes);
+
+                            foreach($recipes as $recipe)
+                            {
+                                echo $recipe['recipe_title'] . '<br>';
+                            }
                             echo "\n";
                             $start = date('M d', strtotime($plan['start_date']));
                             $end = date('M d', strtotime($plan['end_date']));
