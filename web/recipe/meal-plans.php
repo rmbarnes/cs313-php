@@ -92,8 +92,11 @@ var_dump($mealPlan);
                                 $recipeId = $recipe->recipe_id;
                                 echo $recipeTitle . '<br>';
                             }
-                            echo "<a class='btn btn-success' type='submit' href='editPlan.php?id=$planId'>Edit Meal Plan</a>
+                            echo "<div class='d-flex justify-content-between'>
+                                <a class='btn btn-success' href='editPlan.php?id=$planId'>Edit</a>
+                                <a class='btn btn-danger' href='deletePlan.php?id=$planId'>Delete</a>
                                 </div>
+                            </div>
                             </div>
                         </div>";
                         };
