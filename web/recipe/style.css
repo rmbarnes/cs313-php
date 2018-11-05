@@ -29,7 +29,7 @@ body {
     margin-top: 20px;
 }
 
-.col-sm.d-flex.justify-content-between, div.d-flex.justify-content-between {
+.col-sm.d-flex.justify-content-between, .justify-content-between {
     margin-top: 10px;
 
 }
