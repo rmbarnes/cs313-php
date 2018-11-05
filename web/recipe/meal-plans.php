@@ -73,7 +73,7 @@ var_dump($mealPlan);
                         <?php
                         foreach ($mealPlan as $plan)
                         {
-                            $recipes = json_decode($plan['recipes']);
+                            $recipes = json_decode($plan->recipes]);
                             var_dump($recipes);
 
                             foreach($recipes as $recipe)
