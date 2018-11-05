@@ -84,13 +84,14 @@ var_dump($mealPlan);
                             echo "<div class='col-md-4'>
                             <div class='card mb-4 shadow-sm'>
                                 <div class='card-body'>
-                                    <p class='card-text recipe-title'>$start - $end</p>";
+                                    <p class='card-text recipe-title'>$start - $end</p>
+                                    <p class='card-text'>";
 
                             foreach($recipes as $recipe)
                             {
-                                echo $recipe->recipe_title . '<br>';
+                                echo $recipe->recipe_title;
                             }
-                            echo "<p class='card-text'>$recipe</p>
+                            echo "</p>
                                 </div>
                             </div>
                         </div>";
