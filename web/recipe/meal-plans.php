@@ -91,7 +91,7 @@ var_dump($mealPlan);
                             {
                                 echo $recipe->recipe_title;
                             }
-                            echo "</p>
+                            echo "</p><br/>
                                 </div>
                             </div>
                         </div>";
