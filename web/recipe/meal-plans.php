@@ -74,7 +74,7 @@ var_dump($mealPlan);
                         foreach ($mealPlan as $plan)
                         {
                             $recipes = json_decode($plan['recipes']);
-
+                            $planId = $plan['meal_plan_id']
 
                             echo "\n";
                             $start = date('M d', strtotime($plan['start_date']));
@@ -88,9 +88,12 @@ var_dump($mealPlan);
 
                             foreach($recipes as $recipe)
                             {
-                                echo $recipe->recipe_title . '<br>';
+                                $recipeTitle = $recipe->recipe_title;
+                                $recipeId = $recipe->recipe_id;
+                                echo $recipeTitle . '<br>';
                             }
-                            echo "</div>
+                            echo "<button class='btn btn-success' type='submit' href='editPlan.php?id=$planId'>
+                                </div>
                             </div>
                         </div>";
                         };
