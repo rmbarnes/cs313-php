@@ -69,13 +69,13 @@ $recipes = $recipeQuery->fetchAll(PDO::FETCH_ASSOC);
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">Start Date: </label>
-                            <input type="text" class="form-control" id="recipeTitle" name="recipeTitle" value="<?php echo $start; ?>">
+                            <input type="text" class="form-control" id="start" name="start" value="<?php echo $start; ?>">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">End Date: </label>
-                            <input type="text" class="form-control" id="recipeTitle" name="recipeTitle" value="<?php echo $end; ?>">
+                            <input type="text" class="form-control" id="end" name="end" value="<?php echo $end; ?>">
                         </div>
                     </div>
                     <div class="form-row">
@@ -85,7 +85,7 @@ $recipes = $recipeQuery->fetchAll(PDO::FETCH_ASSOC);
                             foreach($recipes as $recipe)
                             {
                                 $recipeId = $recipe['id'];
-                                echo "<input type='checkbox' name='check' value='$recipeId' required> ";
+                                echo "<input type='checkbox' name='check[]' value='$recipeId' required> ";
                                 echo $recipe['recipe_title'];
                                 echo "<br/>";
                             };
