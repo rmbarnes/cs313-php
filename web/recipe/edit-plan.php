@@ -31,15 +31,9 @@ $stmt->bindValue(':planId', $planId, PDO::PARAM_INT);
 $stmt->execute();
 $plan = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump($plan);
 $recipeTitle = $plan[0]['recipe_title'];
 $start = $plan[0]['start_date'];
 $end = $plan[0]['end_date'];
-var_dump($recipeTitle);
-
-var_dump($start);
-var_dump($end);
-
 
 
 //get all recipes
