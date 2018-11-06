@@ -85,7 +85,7 @@ $recipes = $recipeQuery->fetchAll(PDO::FETCH_ASSOC);
                             foreach($recipes as $recipe)
                             {
                                 $recipeId = $recipe['id'];
-                                echo "<input type='checkbox' name='check[]' value='$recipeId' required> ";
+                                echo "<input type='checkbox' name='check[]' value='$recipeId'> ";
                                 echo $recipe['recipe_title'];
                                 echo "<br/>";
                             };
