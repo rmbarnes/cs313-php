@@ -10,7 +10,7 @@ require('../php-connect.php');
 $db = get_db();
 
 
-if (isset($planId))
+if (isset($planId) && isset($_SESSION['userId']))
 {
     $query = "SELECT mp.start_date
             , mp.end_date
@@ -20,6 +20,10 @@ if (isset($planId))
             INNER JOIN public.meal_plan_recipe mpr ON mp.id = mpr.meal_plan_id
             INNER JOIN public.recipe r ON mpr.recipe_id = r.id
             WHERE mp.id = :planId";
+}
+else
+{
+    header('location: login.php');
 }
 
 $stmt = $db->prepare($query);
