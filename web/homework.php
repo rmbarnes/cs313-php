@@ -20,14 +20,18 @@
         </section>
         <div class="container">
             <div class="row">
-                <a class="btn btn-outline-info" href="shopping-cart/browse.php">Shopping Cart</a>
+                <div class="container">
+                    <div class="row">
+                        <a class="btn btn-outline-info" href="shopping-cart/browse.php">Shopping Cart</a>
 
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <a class="btn btn-outline-info" href="recipe/index.php">Recipe App</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <a class="btn btn-outline-info" href="recipe/index.php">Recipe App</a>
 
+                    </div>
+                </div>
             </div>
         </div>
     </main>
