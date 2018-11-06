@@ -93,8 +93,8 @@ var_dump($mealPlan);
                                 echo $recipeTitle . '<br>';
                             }
                             echo "<div class='d-flex justify-content-between'>
-                                <a class='btn btn-success' href='editPlan.php?id=$planId'>Edit</a>
-                                <a class='btn btn-danger' href='deletePlan.php?id=$planId'>Delete</a>
+                                <a class='btn btn-success' href='edit-plan.php?id=$planId'>Edit</a>
+                                <a class='btn btn-danger' href='delete-plan.php?id=$planId'>Delete</a>
                                 </div>
                             </div>
                             </div>
