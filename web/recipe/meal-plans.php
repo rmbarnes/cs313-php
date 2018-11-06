@@ -67,7 +67,7 @@ $mealPlan = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="container text-center">
                 <div class="row">
                     <div class="col-sm d-flex justify-content-end">
-                        <a class='btn btn-success' href='add-meal-plan.php'>Add Meal Plan</a>
+                        <a class='btn btn-success addMP' href='add-meal-plan.php'>Add Meal Plan</a>
                     </div>
                 </div>
             </div>

@@ -36,3 +36,8 @@ body {
 .error {
     color: red;
 }
+
+/*add meal plan button on meal-plans.php */
+.addMP {
+    margin-top: 10px;
+}
