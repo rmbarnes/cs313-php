@@ -38,6 +38,6 @@ body {
 }
 
 /*add meal plan button on meal-plans.php */
-.addMP {
+.btn.btn-success.addMP {
     margin-top: 10px;
 }
