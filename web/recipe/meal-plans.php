@@ -40,7 +40,7 @@ else {
 }
 
 $stmt = $db->prepare($query);
-//$stmt->bindValue(':userId', $_SESSION['userId'], PDO::PARAM_INT);
+$stmt->bindValue(':userId', $_SESSION['userId'], PDO::PARAM_INT);
 $stmt->execute();
 $mealPlan = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
