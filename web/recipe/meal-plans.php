@@ -38,7 +38,8 @@ if (isset($_SESSION['userId']))
 else {
     header('location: login.php');
 }
-
+echo "user id: ";
+var_dump($_SESSION['userId']);
 $stmt = $db->prepare($query);
 $stmt->bindValue(':userId', $_SESSION['userId'], PDO::PARAM_INT);
 $stmt->execute();
