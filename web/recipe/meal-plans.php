@@ -64,7 +64,7 @@ $mealPlan = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <h1 class="display-4 font-italic banner-text">Plan Your Week</h1>
                 <p class="lead my-3 banner-text">Get ahead</p>
             </div>
-            <div class="container text-center addMargin">
+            <div class="container text-center">
                 <div class="row">
                     <div class="col-sm d-flex justify-content-end">
                         <a class='btn btn-success' href='add-meal-plan.php'>Add Meal Plan</a>
