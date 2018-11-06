@@ -72,13 +72,13 @@ $recipes = $recipeQuery->fetchAll(PDO::FETCH_ASSOC);
                 <form method="POST" action="update-plan.php">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="firstname">Start Date: </label>
+                            <label for="firstname">Start Date: (YYYY-MM-DD)</label>
                             <input type="text" class="form-control" id="start" name="start" value="<?php echo $start; ?>">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="firstname">End Date: </label>
+                            <label for="firstname">End Date: (YYYY-MM-DD)</label>
                             <input type="text" class="form-control" id="end" name="end" value="<?php echo $end; ?>">
                         </div>
                     </div>
