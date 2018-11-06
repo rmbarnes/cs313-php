@@ -7,10 +7,16 @@ require('../php-connect.php');
 $db = get_db();
 
 //get all recipes
-$recipeQuery = $db->prepare("SELECT id, recipe_title FROM public.recipe");
-$recipeQuery->execute();
-$recipes = $recipeQuery->fetchAll(PDO::FETCH_ASSOC);
-
+if (isset($_SESSION['userId']))
+{
+    $recipeQuery = $db->prepare("SELECT id, recipe_title FROM public.recipe");
+    $recipeQuery->execute();
+    $recipes = $recipeQuery->fetchAll(PDO::FETCH_ASSOC);
+}
+else
+{
+    header('location: login.php');
+}
 ?>
 
 <!DOCTYPE html>
