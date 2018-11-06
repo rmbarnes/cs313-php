@@ -27,11 +27,14 @@ $stmt->bindValue(':planId', $planId, PDO::PARAM_INT);
 $stmt->execute();
 $plan = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump($plan);
 
 $recipeTitle = $plan['recipe_title'];
 $start = $plan['start_date'];
 $end = $plan['end_date'];
+var_dump($start);
+var_dump($end);
+
+
 
 //get all recipes
 $recipeQuery = $db->prepare("SELECT id, recipe_title FROM public.recipe");
@@ -70,7 +73,7 @@ $recipes = $recipeQuery->fetchAll(PDO::FETCH_ASSOC);
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">End Date: </label>
-                            <textarea class="form-control" id="ingredients" name="ingredients" rows="6"><?php echo $end; ?></textarea>
+                            <input type="text" class="form-control" id="recipeTitle" name="recipeTitle" value="<?php echo $end; ?>">
                         </div>
                     </div>
                     <div class="form-row">
