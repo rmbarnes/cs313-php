@@ -21,15 +21,15 @@ $query->bindValue(':planId', $planId, PDO::PARAM_INT);
 
 $query->execute();
 
-$mealPlanId = $db->lastInsertId("meal_plan_id_seq");
+//$mealPlanId = $db->lastInsertId("meal_plan_id_seq");
 
 foreach ($recipes as $recipeId)
 {
     $anotherQuery = $db->prepare('INSERT INTO meal_plan_recipe(meal_plan_id, recipe_id) VALUES
-(:mealPlanId, :recipeId)');
+(:planId, :recipeId)');
 
-    $anotherQuery->bindValue(":mealPlanId", $mealPlanId);
-    $anotherQuery->bindValue(":recipeId", $recipeId);
+    $anotherQuery->bindValue(":planId", $planId, PDO::PARAM_INT);
+    $anotherQuery->bindValue(":recipeId", $recipeId, PDO::PARAM_INT);
     $anotherQuery->execute();
 }
 
